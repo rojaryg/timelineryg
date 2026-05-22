@@ -6,19 +6,7 @@
     <title>Daily Timeline ✦ Smart U-Turn</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-      @font-face {
-        font-family: 'Google Sans';
-        font-style: normal; font-weight: 400;
-        src: url('https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'Google Sans';
-        font-style: normal; font-weight: 500;
-        src: url('https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2') format('woff2');
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -39,9 +27,9 @@
                         danger: 'var(--danger)',
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['DM Serif Display', 'serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace', 'Inter'],
                     }
                 }
             }
@@ -49,72 +37,72 @@
     </script>
 
     <style>
-        /* ── CSS VARIABLES ── */
+        /* ── HIDE ALL SCROLLBARS GLOBALLY ── */
+        * { scrollbar-width: none !important; }
+        *::-webkit-scrollbar { display: none !important; }
+
+        /* ── CSS VARIABLES (FLOWTASK / COWORKRYG THEME) ── */
         :root {
-          --bg: #1c1c1a;
-          --surface: #262624;
-          --card: #262624;
-          --border: rgba(255,255,255,0.08);
-          --border-light: rgba(255,255,255,0.14);
-          --text: #f0efe8;
-          --text-muted: #a8a89e;
-          --text-dim: #6a6a64;
-          --accent: #c8972a;
-          --flow: #7c5cfc;
+          --bg: #0a0a0a;
+          --surface: #111111;
+          --card: #1c1c1c;
+          --border: #272727;
+          --border-light: #333333;
+          --text: #efefef;
+          --text-muted: #555555;
+          --text-mid: #999999;
+          --accent: #efefef;
+          --accent-glow: rgba(239,239,239,0.10);
+          --flow: #ffffff;
+          --flow-glow: rgba(255,255,255,0.15);
+          --flow-dim: rgba(255,255,255,0.07);
           --success: #4caf82;
           --danger: #e05252;
-          --radius: 10px;
-          --radius-sm: 6px;
-          --outline: rgba(255,255,255,0.08);
-          --outline-strong: rgba(255,255,255,0.18);
-          --shadow: 0 1px 3px rgba(0,0,0,0.35);
-          --font: 'Google Sans', 'Plus Jakarta Sans', sans-serif;
-          --mono: 'DM Mono', monospace;
+          --radius: 14px;
+          --radius-sm: 9px;
+          
+          --shadow: 0 4px 18px rgba(0,0,0,0.18);
+          --font: 'Inter', sans-serif;
+          --mono: 'JetBrains Mono', 'Inter', monospace;
         }
         body[data-theme="light"] {
-          --bg: #ffffff;
-          --surface: #f4f5f8;
+          --bg: #e2e0dc;
+          --surface: #eceae6;
           --card: #ffffff;
-          --border: #e5e7eb;
-          --border-light: #d1d5db;
-          --text: #1f2937;
-          --text-muted: #4b5563;
-          --text-dim: #6b7280;
-          --accent: #c58a24;
-          --flow: #6b3aff;
-          --success: #2f8b66;
-          --danger: #d04b4b;
-          --outline: #e5e7eb;
-          --outline-strong: #c58a24;
+          --border: #d0ceca;
+          --border-light: #c0beba;
+          --text: #141414;
+          --text-muted: #9a9892;
+          --text-mid: #4a4845;
+          --accent: #141414;
+          --accent-glow: rgba(20,20,20,0.08);
+          --flow: #141414;
+          --flow-glow: rgba(20,20,20,0.18);
+          --flow-dim: rgba(0,0,0,0.07);
           --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
         }
         body[data-theme="miku"] {
           --bg: #FFF0F7;
-          --surface: #BCE8E4;
-          --card: #f2fcfb;
+          --surface: #f2fcfb;
+          --card: #ffffff;
           --border: #99D5D0;
           --border-light: #BCE8E4;
           --text: #1A2B2A;
-          --text-muted: #005D57;
-          --text-dim: #007871;
+          --text-muted: #007871;
+          --text-mid: #005D57;
           --accent: #E3007F;
+          --accent-glow: rgba(227,0,127,0.14);
           --flow: #00C4B6;
-          --success: #00a898;
-          --danger: #d04b4b;
-          --outline: #99D5D0;
-          --outline-strong: #00C4B6;
+          --flow-glow: rgba(0,196,182,0.30);
+          --flow-dim: rgba(0,196,182,0.15);
           --shadow: 0 1px 3px rgba(0,160,150,0.15), 0 1px 2px rgba(0,0,0,0.04);
         }
 
         /* ── GLOBAL STYLE ── */
-        body { background-color: var(--bg); color: var(--text); font-family: var(--font); transition: background-color 0.3s ease, color 0.3s ease; }
-        body, .section-card, .form-input, .btn-save, .btn-action, .filter-pill, .queue-item, .modal-box, .hdr-btn, .hdr-menu, .hdr-option, .toast {
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font); transition: background-color 0.3s ease, color 0.3s ease; overflow: hidden; padding: 0 !important; margin: 0; }
+        .section-card, .form-input, .btn-save, .btn-action, .filter-pill, .queue-item, .modal-box, .hdr-btn, .hdr-menu, .hdr-option, .toast {
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        ::-webkit-scrollbar { width: 6px; height: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
         .theme-picker { display: inline-flex; background: var(--border); border-radius: 999px; padding: 3px; gap: 2px; }
         .tpick { padding: 6px 12px; border: none; background: none; border-radius: 999px; font-family: var(--font); font-size: 0.75rem; letter-spacing: 0.04em; color: var(--text-muted); cursor: pointer; transition: all 0.2s; white-space: nowrap; line-height: 1; }
@@ -126,7 +114,7 @@
         .form-input { width: 100%; padding: 10px 13px; background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text); font-family: var(--font); font-size: 0.875rem; outline: none; }
         .form-input:focus { border-color: var(--flow); }
         
-        .btn-save { padding: 10px 20px; background: var(--accent); border: none; border-radius: var(--radius-sm); color: #000; font-family: var(--font); font-size: 0.85rem; font-weight: 500; cursor: pointer; width: 100%; }
+        .btn-save { padding: 10px 20px; background: var(--accent); border: none; border-radius: var(--radius-sm); color: #000; font-family: var(--font); font-size: 0.85rem; font-weight: 600; cursor: pointer; width: 100%; }
         .btn-save:hover { filter: brightness(1.1); transform: translateY(-1px); }
         
         .btn-delete { width: 28px; height: 28px; border-radius: 6px; border: 1px solid transparent; color: var(--text-muted); background: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; }
@@ -137,20 +125,10 @@
         .queue-item.dragging { opacity: 0.35; transform: scale(0.98); }
         .queue-item.drag-over {
             border-color: var(--flow) !important;
-            background-color: rgba(124, 92, 252, 0.07) !important;
+            background-color: var(--flow-dim) !important;
             box-shadow: 0 0 0 1px var(--flow);
         }
-        .drag-handle {
-            cursor: grab;
-            color: var(--text-muted);
-            opacity: 0.4;
-            transition: opacity 0.15s;
-            user-select: none;
-            font-size: 1rem;
-            line-height: 1;
-            padding: 2px 4px;
-            flex-shrink: 0;
-        }
+        .drag-handle { cursor: grab; color: var(--text-muted); opacity: 0.4; transition: opacity 0.15s; user-select: none; font-size: 1rem; line-height: 1; padding: 2px 4px; flex-shrink: 0; }
         .drag-handle:hover { opacity: 1; }
         .drag-handle:active { cursor: grabbing; }
 
@@ -161,7 +139,7 @@
         
         /* ── BTN EDIT ── */
         .btn-edit { width: 28px; height: 28px; border-radius: 6px; border: 1px solid transparent; color: var(--text-muted); background: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; font-size: 0.8rem; }
-        .btn-edit:hover { color: var(--flow); background: rgba(124,92,252,0.1); border-color: rgba(124,92,252,0.25); }
+        .btn-edit:hover { color: var(--flow); background: var(--flow-dim); border-color: rgba(124,92,252,0.25); }
         .btn-check { width: 22px; height: 22px; border-radius: 5px; border: 1.5px solid var(--border-light); background: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0; color: transparent; }
         .btn-check.checked { background: var(--success); border-color: var(--success); color: white; }
         .btn-check:hover:not(.checked) { border-color: var(--success); color: var(--success); }
@@ -171,16 +149,16 @@
         .stat-bar { height: 100%; border-radius: 99px; transition: width 0.4s ease; }
 
         /* ── MODAL EDIT ── */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 100; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); backdrop-filter: blur(5px); z-index: 900; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
         .modal-overlay.show { opacity: 1; pointer-events: all; }
-        .modal-box { background: var(--card); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 28px; width: 90%; max-width: 400px; transform: translateY(12px); transition: transform 0.2s; box-shadow: var(--shadow); }
+        .modal-box { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 26px; width: 92%; max-width: 440px; transform: translateY(12px); transition: transform 0.2s; box-shadow: var(--shadow); }
         .modal-overlay.show .modal-box { transform: translateY(0); }
 
         /* ── TOAST ── */
-        .toast { position: fixed; bottom: 24px; right: 24px; background: var(--card); border: 1px solid var(--border-light); color: var(--text); padding: 12px 18px; border-radius: var(--radius-sm); font-size: 0.83rem; z-index: 200; opacity: 0; transform: translateY(8px); transition: all 0.25s; pointer-events: none; box-shadow: var(--shadow); }
+        .toast { position: fixed; bottom: 100px; right: 24px; background: var(--card); border: 1px solid var(--border-light); color: var(--text); padding: 12px 18px; border-radius: var(--radius-sm); font-size: 0.83rem; z-index: 1000; opacity: 0; transform: translateY(8px); transition: all 0.25s; pointer-events: none; box-shadow: var(--shadow); }
         .toast.show { opacity: 1; transform: translateY(0); }
 
-        /* ── CURRENT TIME NEEDLE (horizontal in vertical timeline) ── */
+        /* ── CURRENT TIME NEEDLE ── */
         .time-needle { position: absolute; pointer-events: none; }
         .time-needle-label { position: absolute; white-space: nowrap; pointer-events: none; }
 
@@ -190,1016 +168,395 @@
 
         /* ── EXPORT BTN ── */
         .btn-action { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border-light); font-family: var(--font); font-size: 0.78rem; cursor: pointer; transition: all 0.15s; background: none; color: var(--text-muted); display: inline-flex; align-items: center; gap: 5px; }
-        .btn-action:hover { border-color: var(--flow); color: var(--text); background: rgba(124,92,252,0.07); }
-        .btn-action.danger:hover { border-color: var(--danger); color: var(--danger); background: rgba(224,82,82,0.07); }
+        .btn-action:hover { border-color: var(--flow); color: var(--text); background: var(--flow-dim); }
+        .btn-action.danger:hover { border-color: var(--danger); color: var(--danger); background: rgba(224,82,82,0.08); }
 
-        /* ── NOTES TEXTAREA ── */
         textarea.form-input { resize: none; line-height: 1.5; }
-
-        /* ── TIMELINE DRAG ── */
         .tl-event-group { position:absolute; inset:0; pointer-events:none; will-change:transform; }
 
         /* ── COLLECTIONS MODAL ── */
-        .coll-overlay {
-            position:fixed; inset:0; background:rgba(0,0,0,0.72); z-index:200;
-            display:flex; align-items:center; justify-content:center;
-            opacity:0; pointer-events:none; transition:opacity 0.2s;
-        }
+        .coll-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.65); backdrop-filter: blur(5px); z-index:900; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.2s; }
         .coll-overlay.show { opacity:1; pointer-events:all; }
-        .coll-panel {
-            background:var(--card); border:1px solid var(--border-light);
-            border-radius:var(--radius); width:min(960px, 96vw); height:min(640px, 92vh);
-            display:flex; flex-direction:column; overflow:hidden;
-        }
-        .coll-topbar {
-            display:flex; align-items:center; justify-content:space-between;
-            padding:16px 20px; border-bottom:1px solid var(--border);
-            flex-shrink:0;
-        }
+        .coll-panel { background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius); width:min(960px, 96vw); height:min(640px, 92vh); display:flex; flex-direction:column; overflow:hidden; box-shadow: var(--shadow); }
+        .coll-topbar { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid var(--border); flex-shrink:0; }
         .coll-body { display:flex; flex:1; overflow:hidden; }
-        .coll-sidebar {
-            width:200px; flex-shrink:0; border-right:1px solid var(--border);
-            display:flex; flex-direction:column; overflow:hidden;
-        }
-        .coll-sidebar-head {
-            padding:12px 14px; font-size:0.65rem; letter-spacing:.1em;
-            text-transform:uppercase; color:var(--text-muted); font-family:var(--mono);
-            border-bottom:1px solid var(--border); flex-shrink:0;
-        }
+        .coll-sidebar { width:200px; flex-shrink:0; border-right:1px solid var(--border); display:flex; flex-direction:column; overflow:hidden; background: var(--card); }
+        .coll-sidebar-head { padding:12px 14px; font-size:0.65rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); font-family:var(--mono); border-bottom:1px solid var(--border); flex-shrink:0; }
         .coll-folder-list { flex:1; overflow-y:auto; padding:6px; }
-        .coll-folder-item {
-            display:flex; align-items:center; gap:8px; padding:8px 10px;
-            border-radius:var(--radius-sm); cursor:pointer; font-size:0.8rem;
-            color:var(--text-muted); transition:background 0.15s, color 0.15s;
-            position:relative;
-        }
+        .coll-folder-item { display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:var(--radius-sm); cursor:pointer; font-size:0.8rem; color:var(--text-muted); transition:background 0.15s, color 0.15s; position:relative; }
         .coll-folder-item:hover { background:var(--surface); color:var(--text); }
-        .coll-folder-item.active { background:var(--surface); color:var(--text); font-weight:600; }
-        .coll-folder-item .coll-folder-dot {
-            width:8px; height:8px; border-radius:50%; flex-shrink:0;
-        }
-        .coll-folder-count {
-            margin-left:auto; font-size:0.65rem; font-family:var(--mono);
-            background:var(--bg); padding:1px 6px; border-radius:999px;
-            color:var(--text-muted);
-        }
-        .coll-folder-del {
-            display:none; position:absolute; right:4px; top:50%; transform:translateY(-50%);
-            background:none; border:none; color:var(--danger); cursor:pointer; font-size:0.75rem;
-            padding:2px 4px;
-        }
+        .coll-folder-item.active { background:var(--flow-dim); color:var(--text); font-weight:600; border:1px solid var(--border-light); }
+        .coll-folder-item .coll-folder-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+        .coll-folder-count { margin-left:auto; font-size:0.63rem; font-family:var(--mono); background:var(--border); padding:1px 6px; border-radius:10px; color:var(--text-muted); }
+        .coll-folder-del { display:none; position:absolute; right:4px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--danger); cursor:pointer; font-size:0.75rem; padding:2px 4px; }
         .coll-folder-item:hover .coll-folder-del { display:block; }
         .coll-sidebar-foot { padding:8px 6px; border-top:1px solid var(--border); flex-shrink:0; }
-        .coll-new-folder-btn {
-            width:100%; padding:7px 10px; background:none; border:1px dashed var(--border-light);
-            border-radius:var(--radius-sm); color:var(--text-muted); font-size:0.75rem;
-            cursor:pointer; transition:all 0.15s; font-family:var(--font);
-        }
-        .coll-new-folder-btn:hover { border-color:var(--accent); color:var(--accent); }
+        .coll-new-folder-btn { width:100%; padding:7px 10px; background:none; border:1px dashed var(--border-light); border-radius:var(--radius-sm); color:var(--text-muted); font-size:0.75rem; cursor:pointer; transition:all 0.15s; font-family:var(--font); }
+        .coll-new-folder-btn:hover { border-color:var(--text-mid); color:var(--text); }
 
         .coll-main { flex:1; display:flex; flex-direction:column; overflow:hidden; }
-        .coll-main-head {
-            padding:12px 16px; border-bottom:1px solid var(--border);
-            display:flex; align-items:center; gap:10px; flex-shrink:0; flex-wrap:wrap;
-        }
-        .coll-search {
-            flex:1; min-width:160px; padding:7px 12px; background:var(--surface);
-            border:1px solid var(--border-light); border-radius:var(--radius-sm);
-            color:var(--text); font-size:0.8rem; font-family:var(--font);
-            outline:none;
-        }
-        .coll-search:focus { border-color:var(--accent); }
-        .coll-save-btn {
-            padding:7px 16px; background:var(--accent); border:none;
-            border-radius:var(--radius-sm); color:#fff; font-size:0.78rem; font-weight:600;
-            cursor:pointer; font-family:var(--font); white-space:nowrap;
-            transition:opacity 0.15s;
-        }
-        .coll-save-btn:hover { opacity:0.85; }
-        .coll-grid {
-            flex:1; overflow-y:auto; padding:16px;
-            display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px;
-            align-content:start;
-        }
-        .coll-card {
-            background:var(--surface); border:1px solid var(--border);
-            border-radius:var(--radius-sm); padding:14px; cursor:pointer;
-            transition:border-color 0.15s, transform 0.12s;
-            display:flex; flex-direction:column; gap:8px;
-        }
-        .coll-card:hover { border-color:var(--border-light); transform:translateY(-2px); }
-        .coll-card-date {
-            font-size:0.65rem; font-family:var(--mono);
-            color:var(--accent); text-transform:uppercase; letter-spacing:.04em;
-        }
-        .coll-card-name {
-            font-size:0.88rem; font-weight:600; color:var(--text);
-            line-height:1.3; font-family:var(--font);
-            overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
-        }
-        .coll-card-meta {
-            font-size:0.68rem; color:var(--text-muted); font-family:var(--mono);
-        }
-        .coll-card-foot {
-            display:flex; gap:6px; margin-top:auto; padding-top:8px;
-            border-top:1px solid var(--border);
-        }
-        .coll-card-load {
-            flex:1; padding:5px; background:var(--accent); border:none;
-            border-radius:6px; color:#fff; font-size:0.72rem; font-weight:600;
-            cursor:pointer; font-family:var(--font); transition:opacity 0.15s;
-        }
-        .coll-card-load:hover { opacity:0.85; }
-        .coll-card-del {
-            padding:5px 8px; background:none; border:1px solid var(--border-light);
-            border-radius:6px; color:var(--danger); font-size:0.72rem;
-            cursor:pointer; transition:background 0.15s;
-        }
-        .coll-card-del:hover { background:rgba(239,68,68,0.1); }
-        .coll-empty {
-            grid-column:1/-1; display:flex; flex-direction:column; align-items:center;
-            justify-content:center; padding:48px 24px; color:var(--text-muted); gap:8px;
-        }
-        /* Save form inside topbar */
-        .coll-save-form {
-            display:none; align-items:center; gap:8px; padding:10px 16px;
-            background:var(--surface); border-bottom:1px solid var(--border); flex-wrap:wrap;
-        }
+        .coll-main-head { padding:12px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; flex-shrink:0; flex-wrap:wrap; background: var(--surface); }
+        .coll-search { flex:1; min-width:160px; padding:7px 12px; background:var(--card); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-size:0.8rem; font-family:var(--font); outline:none; }
+        .coll-search:focus { border-color:var(--flow); }
+        .coll-save-btn { padding:7px 16px; background:var(--accent); border:none; border-radius:var(--radius-sm); color:#000; font-size:0.78rem; font-weight:600; cursor:pointer; font-family:var(--font); white-space:nowrap; transition:opacity 0.15s; }
+        .coll-save-btn:hover { opacity:0.85; filter:brightness(1.1); }
+        .coll-grid { flex:1; overflow-y:auto; padding:16px; display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; align-content:start; background: var(--bg); }
+        .coll-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:14px; cursor:pointer; transition:border-color 0.15s, transform 0.12s, box-shadow 0.2s ease; display:flex; flex-direction:column; gap:8px; }
+        .coll-card:hover { border-color:var(--flow); transform:translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .coll-card-date { font-size:0.65rem; font-family:var(--mono); color:var(--text-muted); text-transform:uppercase; letter-spacing:.04em; }
+        .coll-card-name { font-family:'Space Grotesk', sans-serif; font-size:13px; font-weight:600; color:var(--text); line-height:1.3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; letter-spacing:-0.01em; }
+        .coll-card-meta { font-size:0.68rem; color:var(--text-muted); font-family:var(--mono); }
+        .coll-card-foot { display:flex; gap:6px; margin-top:auto; padding-top:8px; border-top:1px solid var(--border); }
+        .coll-card-load { flex:1; padding:5px; background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-size:0.72rem; font-weight:500; cursor:pointer; font-family:var(--font); transition:opacity 0.15s; }
+        .coll-card-load:hover { background:var(--flow-dim); border-color:var(--flow); }
+        .coll-card-del { padding:5px 8px; background:none; border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--danger); font-size:0.72rem; cursor:pointer; transition:background 0.15s; }
+        .coll-card-del:hover { background:rgba(224,82,82,0.08); border-color:var(--danger); }
+        .coll-empty { grid-column:1/-1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:48px 24px; color:var(--text-muted); gap:8px; }
+        
+        .coll-save-form { display:none; align-items:center; gap:8px; padding:10px 16px; background:var(--surface); border-bottom:1px solid var(--border); flex-wrap:wrap; }
         .coll-save-form.show { display:flex; }
-        .coll-save-input {
-            flex:1; min-width:160px; padding:7px 12px; background:var(--bg);
-            border:1px solid var(--border-light); border-radius:var(--radius-sm);
-            color:var(--text); font-size:0.8rem; outline:none;
-            font-family:var(--font);
-        }
-        .coll-save-input:focus { border-color:var(--accent); }
-        .coll-folder-select {
-            padding:7px 12px; background:var(--bg); border:1px solid var(--border-light);
-            border-radius:var(--radius-sm); color:var(--text); font-size:0.8rem; outline:none;
-            font-family:var(--font); cursor:pointer;
-        }
-        .coll-dot-palette { display:flex; gap:4px; }
+        .coll-save-input { flex:1; min-width:160px; padding:7px 12px; background:var(--card); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-size:0.8rem; outline:none; font-family:var(--font); }
+        .coll-save-input:focus { border-color:var(--flow); }
+        .coll-folder-select { padding:7px 12px; background:var(--card); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-size:0.8rem; outline:none; font-family:var(--font); cursor:pointer; }
+        
         .color-picker-row { display:flex; gap:8px; flex-wrap:wrap; padding:4px 0; }
-        .color-dot {
-            width:24px; height:24px; border-radius:50%; cursor:pointer;
-            border:3px solid transparent; transition:transform 0.12s, box-shadow 0.12s;
-            flex-shrink:0; outline:none; padding:0;
-        }
+        .color-dot { width:24px; height:24px; border-radius:50%; cursor:pointer; border:3px solid transparent; transition:transform 0.12s, box-shadow 0.12s; flex-shrink:0; outline:none; padding:0; }
         .color-dot:hover { transform:scale(1.15); }
         .color-dot.selected { border-color:var(--card); }
-        .coll-dot-choice {
-            width:18px; height:18px; border-radius:50%; border:2px solid transparent;
-            cursor:pointer; transition:border-color 0.15s;
-        }
-        .coll-dot-choice:hover, .coll-dot-choice.selected { border-color:var(--text); }
+        
         .tl-event-group.is-dragging { z-index:50 !important; }
         .tl-drag-card { cursor: grab !important; pointer-events: auto !important; }
         .tl-drag-card:hover { filter: brightness(1.15); }
         .tl-drag-card.dragging-active { cursor: grabbing !important; }
 
-        /* ── HEADER DROPDOWNS ── */
-        .hdr-dropdown { position: relative; }
-        .hdr-btn {
-            display: inline-flex; align-items: center; gap: 7px;
-            padding: 7px 13px;
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: 20px; color: var(--text);
-            font-family: var(--mono); font-size: 0.75rem;
-            cursor: pointer; white-space: nowrap;
-            min-width: 110px; justify-content: space-between;
-            height: 32px; box-sizing: border-box; box-shadow: var(--shadow);
-        }
-        .hdr-btn:hover { border-color: var(--flow); color: var(--text); background: rgba(124,92,252,0.07); }
-        .hdr-chevron { width: 10px; height: 6px; color: var(--text-muted); flex-shrink: 0; transition: transform 0.2s; }
-        .hdr-dropdown.open .hdr-chevron { transform: rotate(180deg); }
-        .hdr-menu {
-            display: none; position: absolute; right: 0; top: calc(100% + 6px);
-            background: var(--card); border: 1px solid var(--border-light);
-            border-radius: var(--radius-sm); min-width: 100%; z-index: 300;
-            box-shadow: var(--shadow);
-            overflow: hidden;
-        }
-        .hdr-dropdown.open .hdr-menu { display: block; }
-        .hdr-option {
-            display: block; width: 100%; padding: 9px 14px;
-            background: none; border: none; text-align: left;
-            font-family: var(--mono); font-size: 0.75rem;
-            color: var(--text-muted); cursor: pointer; transition: background 0.12s, color 0.12s;
-        }
-        .hdr-option:hover { background: var(--surface); color: var(--text); }
-        .hdr-option.active { color: var(--flow); font-weight: 600; background: rgba(124,92,252,0.07); }
-        .hdr-option[data-theme="miku"].active { color: #E3007F; background: rgba(227,0,127,0.07); }
-
-        .tl-snap-ghost {
-            position:absolute; left:0; right:0;
-            border-top: 2px dashed var(--accent);
-            opacity:0; pointer-events:none; z-index:40;
-            transition: top 0.08s ease;
-        }
+        .tl-snap-ghost { position:absolute; left:0; right:0; border-top: 2px dashed var(--accent); opacity:0; pointer-events:none; z-index:40; transition: top 0.08s ease; }
         .tl-snap-ghost.visible { opacity:0.85; }
-        .tl-drag-tooltip {
-            position:fixed; background:var(--card); border:1px solid var(--border-light);
-            color:var(--text); padding:6px 12px; border-radius:var(--radius-sm);
-            font-size:0.72rem; font-family:var(--mono);
-            z-index:1000; pointer-events:none; opacity:0; transition:opacity 0.15s;
-            white-space:nowrap;
-        }
+        .tl-drag-tooltip { position:fixed; background:var(--card); border:1px solid var(--border-light); color:var(--text); padding:6px 12px; border-radius:var(--radius-sm); font-size:0.72rem; font-family:var(--mono); z-index:1000; pointer-events:none; opacity:0; transition:opacity 0.15s; white-space:nowrap; }
         .tl-drag-tooltip.visible { opacity:1; }
 
-        /* ── DATE BADGE ── */
-        .date-badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: 999px; padding: 5px 14px;
-            font-family: var(--mono);
-            font-size: 0.72rem; color: var(--text-muted);
-            letter-spacing: 0.03em;
-        }
+        .date-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border-light); border-radius: 999px; padding: 5px 14px; font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.03em; }
         .date-badge strong { color: var(--text); font-weight: 600; }
-
-        /* ── DATE INPUT ── */
-        input[type="date"].date-input {
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-sm); color: var(--text);
-            font-family: var(--mono); font-size: 0.8rem;
-            padding: 6px 10px; outline: none; cursor: pointer;
-            transition: border-color 0.15s;
-        }
+        input[type="date"].date-input { background: var(--card); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text-mid); font-family: var(--font); font-size: 0.8rem; padding: 6px 10px; outline: none; cursor: pointer; transition: border-color 0.15s; }
         input[type="date"].date-input:focus { border-color: var(--flow); }
+        input[type="date"].date-input:hover { border-color: var(--text-muted); color: var(--text); }
 
-        /* ── EXPORT MODAL RESOLUTIONS ── */
-        .res-btn {
-            width: 100%; padding: 12px 16px;
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-sm); color: var(--text);
-            font-family: var(--font);
-            font-size: 0.85rem; font-weight: 500;
-            cursor: pointer; transition: all 0.15s;
-            display: flex; align-items: center; justify-content: space-between;
-            text-align: left;
-        }
-        .res-btn:hover { border-color: var(--accent); background: rgba(200,151,42,0.07); }
+        .res-btn { width: 100%; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-sm); color: var(--text); font-family: var(--font); font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: space-between; text-align: left; }
+        .res-btn:hover { border-color: var(--accent); background: rgba(239,239,239,0.05); }
         .res-btn .res-label { font-size: 0.7rem; color: var(--text-muted); font-family: var(--mono); }
 
-
-        /* ── FULLSCREEN BUTTON ── */
-        .btn-fullscreen {
-            padding: 6px 12px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-light);
-            font-family: var(--font);
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: all 0.15s;
-            background: none;
-            color: var(--text-muted);
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            white-space: nowrap;
-        }
-        .btn-fullscreen:hover {
-            border-color: var(--flow);
-            color: var(--text);
-            background: rgba(124,92,252,0.07);
-        }
-
-        /* ── FULLSCREEN MODE ── */
-        #timelineCard.fullscreen-mode {
-            position: fixed !important;
-            inset: 0 !important;
-            z-index: 500 !important;
-            border-radius: 0 !important;
-            border: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            width: 100vw !important;
-            max-width: none !important;
-            height: 100vh !important;
-            display: flex !important;
-            flex-direction: column !important;
-            background: var(--bg) !important;
-            overflow: hidden !important;
-            box-shadow: none !important;
-        }
-        #timelineCard.fullscreen-mode .fullscreen-header {
-            display: none !important;
-        }
-        .fullscreen-header {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            border-bottom: 1px solid var(--border);
-            flex-shrink: 0;
-        }
-        #timelineCard.fullscreen-mode #timelineScroll {
-            flex: 1;
-            height: 0 !important;
-            min-height: 0;
-            overflow-y: auto;
-            overflow-x: hidden;
-            border-radius: 0 !important;
-            border: none !important;
-            background: var(--bg) !important;
-        }
-        #timelineCard.fullscreen-mode .normal-header {
-            display: none !important;
-        }
-        body.fs-active {
-            overflow: hidden;
-        }
+        /* ── SINGLE PAGE APP LAYOUT ── */
         .page-shell {
             position: relative;
-            min-height: 100vh;
+            height: 100vh;
+            padding: 16px 16px 86px 16px; /* Memberi ruang untuk panel bawah */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
-        .content-layer {
-            position: relative;
-            z-index: 1;
-        }
         .stage-grid {
             display: grid;
-            gap: 24px;
-            align-items: stretch;
-            min-height: calc(100vh - 120px);
-        }
-        @media (min-width: 1024px) {
-            .stage-grid {
-                grid-template-columns: minmax(280px, 1.1fr) minmax(560px, 1.8fr) minmax(280px, 1.1fr);
-            }
-        }
-        .stage-grid.single {
             grid-template-columns: minmax(0, 1fr);
             justify-items: center;
-            grid-template-rows: 1fr;
-            height: calc(100vh - 120px);
-        }
-        .stage-grid.single .app-section.is-active {
-            width: min(960px, 100%);
             height: 100%;
-            overflow: auto;
+            gap: 0;
+            overflow: hidden;
         }
-        .stage-grid.single .app-section.is-active.section-flex {
-            width: min(960px, 100%);
-            height: 100%;
-            overflow: auto;
-        }
+
         .section-card {
             background: var(--card);
-            border: 1px solid var(--outline);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 960px;
         }
-        .center-card {
-            border-color: var(--outline-strong);
-            box-shadow: var(--shadow);
-        }
-        .section-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 14px;
-            margin-bottom: 16px;
-        }
-        .section-kicker {
-            font-size: 0.65rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            font-family: var(--mono);
-        }
-        .section-sub {
-            font-size: 0.76rem;
-            color: var(--text-muted);
-        }
-        .section-divider {
-            height: 1px;
-            background: var(--border);
-            margin: 18px 0;
-        }
-        .task-scroll {
-            max-height: 480px;
-        }
-        .section-tabs {
-            display: inline-flex;
-            gap: 6px;
-            padding: 4px;
-            border-radius: 999px;
-            background: var(--border);
-            border: 1px solid var(--border-light);
-        }
-        .section-tab {
-            padding: 7px 16px;
-            border-radius: 999px;
-            border: none;
-            background: none;
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            font-family: var(--mono);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-        .section-tab:hover {
-            color: var(--text);
-        }
-        .section-tab.active {
-            background: var(--surface);
-            color: var(--text);
-
-        }
-        .app-section {
-            display: none !important;
-        }
-        .app-section.is-active {
-            display: block !important;
-        }
-        .app-section.section-flex.is-active {
-            display: flex !important;
-        }
-        /* ── SETTINGS BUTTON ── */
-        .hdr-settings-btn {
-            display: inline-flex; align-items: center; gap: 7px;
-            padding: 7px 13px;
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: 20px; color: var(--text-muted);
-            font-family: var(--mono); font-size: 0.75rem;
-            cursor: pointer; white-space: nowrap;
-            height: 32px; box-sizing: border-box; box-shadow: var(--shadow);
-            transition: all 0.15s;
-        }
-        .hdr-settings-btn:hover { border-color: var(--flow); color: var(--text); background: rgba(124,92,252,0.07); }
-        .hdr-settings-btn svg { transition: transform 0.4s ease; }
-        .hdr-settings-btn:hover svg { transform: rotate(60deg); }
-
-        /* ── SETTINGS OVERLAY ── */
-        .settings-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.45);
-            backdrop-filter: blur(3px); z-index: 400;
-            opacity: 0; pointer-events: none; transition: opacity 0.25s;
-        }
-        .settings-overlay.show { opacity: 1; pointer-events: all; }
+        
+        .section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 16px; }
+        .section-kicker { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); font-family: var(--mono); }
+        .section-sub { font-size: 0.76rem; color: var(--text-muted); }
+        .section-divider { height: 1px; background: var(--border); margin: 18px 0; }
+        
+        .app-section { display: none !important; }
+        .app-section.is-active { display: flex !important; flex-direction: column; height: 100%; overflow: hidden; }
 
         /* ── SETTINGS PANEL ── */
-        .settings-panel {
-            position: fixed; top: 0; right: 0; height: 100vh;
-            width: min(360px, 96vw);
-            background: var(--card); border-left: 1px solid var(--border-light);
-            z-index: 401; display: flex; flex-direction: column;
-            transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-            box-shadow: -8px 0 32px rgba(0,0,0,0.25);
-        }
+        .settings-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); backdrop-filter: blur(5px); z-index: 900; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+        .settings-overlay.show { opacity: 1; pointer-events: all; }
+        .settings-panel { position: fixed; top: 0; right: 0; height: 100vh; width: min(360px, 96vw); background: var(--surface); border-left: 1px solid var(--border-light); z-index: 901; display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); box-shadow: -8px 0 32px rgba(0,0,0,0.25); }
         .settings-panel.show { transform: translateX(0); }
-        .settings-hdr {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 18px 20px; border-bottom: 1px solid var(--border);
-            flex-shrink: 0;
-        }
-        .settings-close-btn {
-            background: none; border: none; color: var(--text-muted);
-            font-size: 1.1rem; cursor: pointer; padding: 4px 6px;
-            border-radius: var(--radius-sm); transition: background 0.15s, color 0.15s;
-        }
-        .settings-close-btn:hover { background: var(--surface); color: var(--text); }
+        .settings-hdr { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+        .settings-close-btn { background: none; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer; padding: 4px 6px; border-radius: var(--radius-sm); transition: background 0.15s, color 0.15s; }
+        .settings-close-btn:hover { background: var(--card); color: var(--text); }
         .settings-body { flex: 1; overflow-y: auto; padding: 8px 0; }
         .settings-section { padding: 18px 20px; }
-        .settings-section-label {
-            font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
-            color: var(--text-muted); font-family: var(--mono); font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .settings-section-desc {
-            font-size: 0.75rem; color: var(--text-muted); line-height: 1.55;
-            margin-bottom: 14px;
-        }
+        .settings-section-label { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-family: var(--mono); font-weight: 600; margin-bottom: 6px; }
+        .settings-section-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px; }
         .settings-divider { height: 1px; background: var(--border); margin: 0 20px; }
 
-        /* ── THEME PICKER (settings) ── */
         .settings-theme-group { display: flex; flex-direction: column; gap: 8px; }
-        .settings-theme-btn {
-            display: flex; align-items: center; gap: 12px;
-            width: 100%; padding: 11px 14px;
-            background: var(--surface); border: 1.5px solid var(--border);
-            border-radius: var(--radius-sm); cursor: pointer;
-            transition: border-color 0.15s, background 0.15s;
-            text-align: left;
-        }
-        .settings-theme-btn:hover { border-color: var(--border-light); }
-        .settings-theme-btn.active {
-            border-color: var(--flow);
-            background: rgba(124,92,252,0.07);
-        }
-        .settings-theme-btn[data-theme="miku"].active {
-            border-color: #E3007F;
-            background: rgba(227,0,127,0.07);
-        }
-        .settings-theme-preview {
-            width: 36px; height: 22px; border-radius: 5px; flex-shrink: 0;
-            border: 1px solid var(--border);
-        }
-        .dark-preview  { background: linear-gradient(135deg, #1c1c1a 50%, #c8972a 50%); }
-        .light-preview { background: linear-gradient(135deg, #ffffff 50%, #c58a24 50%); }
-        .miku-preview  { background: linear-gradient(135deg, #FFF0F7 50%, #E3007F 50%); }
-        .settings-theme-name {
-            flex: 1; font-size: 0.82rem; color: var(--text); font-family: var(--font);
-        }
-        .settings-theme-check {
-            font-size: 0.75rem; color: var(--flow); opacity: 0;
-            transition: opacity 0.15s;
-        }
+        .settings-theme-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 11px 14px; background: var(--card); border: 1.5px solid var(--border-light); border-radius: var(--radius-sm); cursor: pointer; transition: border-color 0.15s, background 0.15s; text-align: left; }
+        .settings-theme-btn:hover { border-color: var(--text-muted); }
+        .settings-theme-btn.active { border-color: var(--flow); background: var(--flow-dim); }
+        .settings-theme-btn[data-theme="miku"].active { border-color: #E3007F; background: rgba(227,0,127,0.07); }
+        .settings-theme-preview { width: 36px; height: 22px; border-radius: 5px; flex-shrink: 0; border: 1px solid var(--border); }
+        .dark-preview  { background: linear-gradient(135deg, #111111 50%, #c8972a 50%); }
+        .light-preview { background: linear-gradient(135deg, #eceae6 50%, #c58a24 50%); }
+        .miku-preview  { background: linear-gradient(135deg, #f2fcfb 50%, #E3007F 50%); }
+        .settings-theme-name { flex: 1; font-size: 0.82rem; color: var(--text); font-family: var(--font); }
+        .settings-theme-check { font-size: 0.75rem; color: var(--flow); opacity: 0; transition: opacity 0.15s; }
         .settings-theme-btn[data-theme="miku"] .settings-theme-check { color: #E3007F; }
         .settings-theme-btn.active .settings-theme-check { opacity: 1; }
 
         /* ── GITHUB SYNC ── */
-        .gh-sync-status {
-            display: flex; align-items: center; gap: 6px;
-            font-size: 0.7rem; font-family: var(--mono);
-            color: var(--text-muted); margin-top: 10px;
-            min-height: 18px;
-        }
-        .gh-status-dot {
-            width: 7px; height: 7px; border-radius: 50%;
-            flex-shrink: 0; background: var(--border-light);
-            transition: background 0.3s;
-        }
+        .gh-sync-status { display: flex; align-items: center; gap: 6px; font-size: 0.7rem; font-family: var(--mono); color: var(--text-muted); margin-top: 10px; min-height: 18px; }
+        .gh-status-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--border-light); transition: background 0.3s; }
         .gh-status-dot.ok  { background: var(--success); }
         .gh-status-dot.err { background: var(--danger); }
         .gh-status-dot.busy { background: var(--accent); animation: gh-pulse 0.8s infinite alternate; }
         @keyframes gh-pulse { from { opacity:0.4; } to { opacity:1; } }
         .gh-token-wrap { position: relative; }
         .gh-token-wrap .form-input { padding-right: 36px; font-family: var(--mono); font-size: 0.78rem; }
-        .gh-eye-btn {
-            position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-            background: none; border: none; color: var(--text-muted); cursor: pointer;
-            font-size: 0.85rem; padding: 2px 4px; line-height: 1;
-        }
+        .gh-eye-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; padding: 2px 4px; line-height: 1; }
         .gh-eye-btn:hover { color: var(--text); }
         .gh-btn-row { display: flex; gap: 8px; margin-top: 10px; }
-        .gh-btn {
-            flex: 1; padding: 9px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);
-            background: var(--surface); color: var(--text); font-family: var(--font);
-            font-size: 0.78rem; font-weight: 500; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; gap: 5px;
-            transition: all 0.15s;
-        }
-        .gh-btn:hover:not(:disabled) { border-color: var(--flow); color: var(--text); background: rgba(124,92,252,0.07); }
+        .gh-btn { flex: 1; padding: 9px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); background: var(--card); color: var(--text); font-family: var(--font); font-size: 0.78rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: all 0.15s; }
+        .gh-btn:hover:not(:disabled) { border-color: var(--flow); color: var(--text); background: var(--flow-dim); }
         .gh-btn.primary { background: var(--accent); border-color: var(--accent); color: #000; }
         .gh-btn.primary:hover:not(:disabled) { filter: brightness(1.1); }
         .gh-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-        .gh-gist-link {
-            font-size: 0.67rem; font-family: var(--mono); color: var(--flow);
-            text-decoration: none; word-break: break-all;
-        }
-        .gh-gist-link:hover { text-decoration: underline; }
-        .gh-info-box {
-            background: var(--surface); border: 1px solid var(--border-light);
-            border-radius: var(--radius-sm); padding: 10px 12px; margin-top: 10px;
-            font-size: 0.68rem; color: var(--text-muted); font-family: var(--mono);
-            line-height: 1.7;
-        }
-
+        .gh-info-box { background: var(--card); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 10px 12px; margin-top: 10px; font-size: 0.68rem; color: var(--text-muted); font-family: var(--mono); line-height: 1.7; }
 
         /* ── CACHE INFO ── */
-        .cache-info-box {
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: var(--radius-sm); padding: 12px 14px;
-            margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px;
-        }
-        .cache-info-row {
-            display: flex; align-items: center; justify-content: space-between;
-            font-size: 0.75rem;
-        }
-        .cache-info-label {
-            display: flex; align-items: center; gap: 7px;
-            color: var(--text-muted); font-family: var(--font);
-        }
+        .cache-info-box { background: var(--card); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 8px; }
+        .cache-info-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; }
+        .cache-info-label { display: flex; align-items: center; gap: 7px; color: var(--text-muted); font-family: var(--font); }
         .cache-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
-        .cache-info-val {
-            font-family: var(--mono); font-size: 0.7rem; color: var(--text);
-            background: var(--bg); padding: 2px 8px; border-radius: 999px;
-            border: 1px solid var(--border);
-        }
+        .cache-info-val { font-family: var(--mono); font-size: 0.7rem; color: var(--text); background: var(--bg); padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
 
-        /* ── CACHE CLEAR BUTTONS ── */
         .cache-btn-group { display: flex; flex-direction: column; gap: 7px; }
-        .cache-clear-btn {
-            display: flex; align-items: center; gap: 12px;
-            width: 100%; padding: 12px 14px;
-            background: var(--surface); border: 1.5px solid var(--border);
-            border-radius: var(--radius-sm); cursor: pointer;
-            transition: border-color 0.15s, background 0.15s;
-            text-align: left;
-        }
+        .cache-clear-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; background: var(--card); border: 1px solid var(--border-light); border-radius: var(--radius-sm); cursor: pointer; transition: border-color 0.15s, background 0.15s; text-align: left; }
         .cache-clear-btn:hover { border-color: var(--danger); background: rgba(224,82,82,0.05); }
         .cache-clear-btn.cache-clear-all { border-color: rgba(224,82,82,0.3); }
         .cache-clear-btn.cache-clear-all:hover { background: rgba(224,82,82,0.1); }
         .cache-clear-icon { font-size: 1.1rem; flex-shrink: 0; }
-        .cache-clear-title {
-            display: block; font-size: 0.8rem; color: var(--text);
-            font-family: var(--font); font-weight: 500; margin-bottom: 1px;
-        }
-        .cache-clear-sub {
-            display: block; font-size: 0.67rem; color: var(--text-muted);
-            font-family: var(--mono);
-        }
+        .cache-clear-title { display: block; font-size: 0.8rem; color: var(--text); font-family: var(--font); font-weight: 500; margin-bottom: 1px; }
+        .cache-clear-sub { display: block; font-size: 0.67rem; color: var(--text-muted); font-family: var(--mono); }
         .cache-clear-btn.cache-clear-all .cache-clear-title { color: var(--danger); }
 
         /* ── AGENDA: DAFTAR KEGIATAN HARI INI ── */
-        .ag-date-badge {
-            display:inline-flex; align-items:center; gap:6px;
-            padding:4px 12px; background:var(--surface); border:1px solid var(--border-light);
-            border-radius:999px; font-size:0.7rem; font-family:var(--mono); color:var(--accent);
-            letter-spacing:0.04em;
-        }
-        .ag-progress-row {
-            display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-            padding:10px 14px; background:var(--surface); border:1px solid var(--border);
-            border-radius:var(--radius-sm); margin-bottom:14px; font-size:0.75rem; color:var(--text-muted);
-        }
+        .ag-date-badge { display:inline-flex; align-items:center; gap:6px; padding:4px 12px; background:var(--surface); border:1px solid var(--border-light); border-radius:999px; font-size:0.7rem; font-family:var(--mono); color:var(--text-mid); letter-spacing:0.04em; }
+        .ag-progress-row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:14px; font-size:0.75rem; color:var(--text-muted); }
         .ag-stat { display:flex; align-items:center; gap:5px; }
         .ag-stat-val { font-family:var(--mono); color:var(--text); font-weight:600; }
         .ag-prog-wrap { height:4px; background:var(--border); border-radius:99px; overflow:hidden; flex:1; min-width:60px; }
         .ag-prog-bar { height:100%; background:var(--success); border-radius:99px; transition:width 0.4s ease; }
-        /* Section divider label */
-        .ag-section-label {
-            font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase;
-            color:var(--text-muted); font-family:var(--mono); padding:6px 0 8px;
-            border-bottom:1px solid var(--border); margin-bottom:8px;
-        }
-        /* Event item from timeline */
-        .ag-item {
-            display:flex; align-items:flex-start; gap:10px;
-            padding:10px 13px; background:var(--surface); border:1px solid var(--border);
-            border-radius:var(--radius-sm); margin-bottom:7px;
-            transition:border-color 0.15s, opacity 0.2s;
-        }
+        .ag-section-label { font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); font-family:var(--mono); padding:6px 0 8px; border-bottom:1px solid var(--border); margin-bottom:8px; }
+        .ag-item { display:flex; align-items:flex-start; gap:10px; padding:10px 13px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:7px; transition:border-color 0.15s, opacity 0.2s; }
         .ag-item:hover { border-color:var(--border-light); }
-        .ag-item.ag-done { opacity:0.42; }
+        .ag-item.ag-done { opacity:0.45; }
         .ag-item.ag-done .ag-item-name { text-decoration:line-through; color:var(--text-muted); }
-        .ag-check {
-            width:20px; height:20px; border-radius:5px; border:1.5px solid var(--border-light);
-            background:none; display:flex; align-items:center; justify-content:center;
-            cursor:pointer; transition:all 0.18s; color:transparent;
-            flex-shrink:0; margin-top:1px; font-size:0.65rem;
-        }
+        .ag-check { width:20px; height:20px; border-radius:5px; border:1.5px solid var(--border-light); background:none; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.18s; color:transparent; flex-shrink:0; margin-top:1px; font-size:0.65rem; }
         .ag-check:hover { border-color:var(--success); color:rgba(76,175,130,0.5); }
         .ag-check.checked { border-color:var(--success); background:rgba(76,175,130,0.15); color:var(--success); }
-        .ag-color-dot {
-            width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:5px;
-        }
+        .ag-color-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:5px; }
         .ag-item-body { flex:1; min-width:0; }
         .ag-item-name { font-size:0.875rem; color:var(--text); line-height:1.4; word-break:break-word; }
-        .ag-item-time {
-            font-size:0.62rem; color:var(--text-muted); font-family:var(--mono); margin-top:3px;
-        }
-        .ag-del-btn {
-            width:24px; height:24px; border-radius:5px; border:1px solid transparent;
-            background:none; color:var(--text-muted); cursor:pointer; font-size:0.75rem;
-            display:flex; align-items:center; justify-content:center; transition:all 0.15s; flex-shrink:0;
-        }
+        .ag-item-time { font-size:0.62rem; color:var(--text-muted); font-family:var(--mono); margin-top:3px; }
+        .ag-del-btn { width:24px; height:24px; border-radius:5px; border:1px solid transparent; background:none; color:var(--text-muted); cursor:pointer; font-size:0.75rem; display:flex; align-items:center; justify-content:center; transition:all 0.15s; flex-shrink:0; }
         .ag-del-btn:hover { color:var(--danger); background:rgba(224,82,82,0.1); border-color:rgba(224,82,82,0.25); }
-        /* Extra activities add form */
         .ag-add-row { display:flex; gap:7px; margin-bottom:10px; }
-        .ag-add-input {
-            flex:1; padding:9px 12px; background:var(--surface); border:1px solid var(--border-light);
-            border-radius:var(--radius-sm); color:var(--text); font-family:var(--font); font-size:0.85rem;
-            outline:none; transition:border-color 0.15s;
-        }
+        .ag-add-input { flex:1; padding:9px 12px; background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-family:var(--font); font-size:0.85rem; outline:none; transition:border-color 0.15s; }
         .ag-add-input:focus { border-color:var(--flow); }
-        .ag-add-time {
-            width:90px; padding:9px 8px; background:var(--surface); border:1px solid var(--border-light);
-            border-radius:var(--radius-sm); color:var(--text); font-family:var(--mono); font-size:0.8rem;
-            outline:none; flex-shrink:0;
-        }
-        .ag-add-btn {
-            padding:9px 16px; background:var(--accent); border:none; border-radius:var(--radius-sm);
-            color:#000; font-family:var(--font); font-size:0.82rem; font-weight:600;
-            cursor:pointer; transition:filter 0.15s; flex-shrink:0; white-space:nowrap;
-        }
+        .ag-add-time { width:90px; padding:9px 8px; background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text); font-family:var(--mono); font-size:0.8rem; outline:none; flex-shrink:0; }
+        .ag-add-btn { padding:9px 16px; background:var(--accent); border:none; border-radius:var(--radius-sm); color:#000; font-family:var(--font); font-size:0.82rem; font-weight:600; cursor:pointer; transition:filter 0.15s; flex-shrink:0; white-space:nowrap; }
         .ag-add-btn:hover { filter:brightness(1.1); }
-        .ag-empty {
-            display:flex; flex-direction:column; align-items:center; justify-content:center;
-            padding:28px 16px; color:var(--text-muted); gap:6px; text-align:center;
-            border:1px dashed var(--border); border-radius:var(--radius-sm);
-        }
+        .ag-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px 16px; color:var(--text-muted); gap:6px; text-align:center; border:1px dashed var(--border); border-radius:var(--radius-sm); }
         .ag-list { overflow-y:auto; }
-        .ag-clear-btn {
-            padding:5px 12px; border-radius:20px; border:1px solid var(--border-light);
-            font-family:var(--font); font-size:0.72rem; cursor:pointer; transition:all 0.15s;
-            background:none; color:var(--text-muted);
-        }
-        .ag-clear-btn:hover { border-color:var(--danger); color:var(--danger); background:rgba(224,82,82,0.07); }
-        .ag-from-tl-badge {
-            font-size:0.58rem; font-family:var(--mono); padding:1px 6px;
-            border-radius:999px; border:1px solid var(--border);
-            color:var(--text-muted); letter-spacing:0.04em; flex-shrink:0;
-        }
+        .ag-clear-btn { padding:5px 12px; border-radius:20px; border:1px solid var(--border-light); font-family:var(--font); font-size:0.72rem; cursor:pointer; transition:all 0.15s; background:none; color:var(--text-muted); }
+        .ag-clear-btn:hover { border-color:var(--danger); color:var(--danger); background:rgba(224,82,82,0.08); }
+        .ag-from-tl-badge { font-size:0.58rem; font-family:var(--mono); padding:1px 6px; border-radius:999px; border:1px solid var(--border); color:var(--text-muted); letter-spacing:0.04em; flex-shrink:0; }
 
-        /* ── UTURN HEADER LAYOUT ── */
-        /* ── UTURN HEADER: sembunyikan title & date saat uturn (ada di bottom nav) ── */
-        body.uturn-active header {
-            display: none;
+        /* ── BOTTOM NAV (GLOBAL) ── */
+        #bottomNav {
+            display: flex; position: fixed; bottom: 0; left: 0; right: 0;
+            z-index: 600; flex-direction: column; align-items: center;
+            padding: 12px 20px; gap: 6px;
+            background: var(--surface); border-top: 1px solid var(--border);
+            backdrop-filter: blur(12px);
         }
-
-        /* Date input versi uturn — tidak dipakai di header */
-        #hdrDateUturn { display: none; }
-
-        /* ── UTURN BOTTOM NAV ── */
-        #uturnBottomNav {
-            display: none;
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            z-index: 600;
-            flex-direction: column;
-            align-items: center;
-            padding: 8px 20px 12px;
-            gap: 2px;
-        }
-        body.uturn-active #uturnBottomNav {
-            display: flex;
-        }
-        /* Baris atas: title + date */
-        .ubnav-top-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 4px 0 6px;
-        }
-        .ubnav-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1rem;
-            color: var(--text);
-            opacity: 0.75;
-            line-height: 1;
-        }
-        /* Baris bawah: tombol-tombol */
-        .ubnav-bottom-row {
-            display: flex;
-            align-items: center;
-            gap: 2px;
-        }
+        .ubnav-top-row { display: flex; align-items: center; gap: 10px; padding: 4px 0 6px; }
+        .ubnav-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text); letter-spacing: -0.02em; line-height: 1; }
+        .ubnav-bottom-row { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: center; }
         .ubnav-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 6px 14px;
-            background: none;
-            border: none;
-            border-radius: 20px;
-            color: var(--text-muted);
-            font-family: var(--mono);
-            font-size: 0.73rem;
-            cursor: pointer;
-            transition: color 0.15s, background 0.15s;
+            display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px;
+            background: none; border: 1px solid transparent; border-radius: 20px; color: var(--text-muted);
+            font-family: var(--font); font-size: 0.8rem; cursor: pointer; transition: color 0.15s, background 0.15s;
             white-space: nowrap;
         }
-        .ubnav-btn:hover {
-            color: var(--text);
-            background: rgba(255,255,255,0.05);
-        }
-        .ubnav-btn.active {
-            color: var(--flow);
-            font-weight: 600;
-        }
-        .ubnav-divider {
-            width: 1px;
-            height: 16px;
-            background: var(--border-light);
-            margin: 0 6px;
-            flex-shrink: 0;
-        }
+        .ubnav-btn:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+        body[data-theme="light"] .ubnav-btn:hover { background: rgba(0,0,0,0.05); }
+        .ubnav-btn.active { color: var(--text); font-weight: 500; background: var(--flow-dim); border-color: var(--border-light); }
+        
+        .ubnav-divider { width: 1px; height: 16px; background: var(--border-light); margin: 0 6px; flex-shrink: 0; }
+        
         .ubnav-settings-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 6px 14px;
-            background: none;
-            border: none;
-            border-radius: 20px;
-            color: var(--text-muted);
-            font-family: var(--mono);
-            font-size: 0.73rem;
-            cursor: pointer;
-            transition: color 0.15s, background 0.15s;
+            display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px;
+            background: none; border: none; border-radius: 20px; color: var(--text-muted);
+            font-family: var(--font); font-size: 0.8rem; cursor: pointer; transition: color 0.15s, background 0.15s;
         }
-        .ubnav-settings-btn:hover {
-            color: var(--text);
-            background: rgba(255,255,255,0.05);
-        }
+        .ubnav-settings-btn:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+        body[data-theme="light"] .ubnav-settings-btn:hover { background: rgba(0,0,0,0.05); }
+        
         .ubnav-straight-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 6px 14px;
-            background: none;
-            border: none;
-            border-radius: 20px;
-            color: var(--text-muted);
-            font-family: var(--mono);
-            font-size: 0.73rem;
-            cursor: pointer;
-            transition: color 0.15s, background 0.15s;
-            white-space: nowrap;
+            display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px;
+            background: none; border: 1px solid var(--border-light); border-radius: 20px; color: var(--text-mid);
+            font-family: var(--font); font-size: 0.75rem; cursor: pointer; transition: color 0.15s, background 0.15s;
+            white-space: nowrap; margin-left: 6px;
         }
-        .ubnav-straight-btn:hover {
-            color: var(--text);
-            background: rgba(255,255,255,0.05);
-        }
+        .ubnav-straight-btn:hover { color: var(--text); background: var(--card); border-color: var(--text-muted); }
+
     </style>
 </head>
-<body class="font-sans min-h-screen p-4 md:p-8" data-theme="dark">
+<body data-theme="dark">
 
     <div class="page-shell">
-        <div class="max-w-[1400px] mx-auto content-layer">
+        <input type="hidden" id="timelineDate" value="">
 
-            <!-- Sleek top bar with title, date picker, and theme -->
-            <header class="flex items-center gap-3 py-3">
-                <h1 style="font-size:1.2rem;font-family:'DM Serif Display',serif;color:var(--text);tracking:tight;margin:0;">Timeline<span>✦</span></h1>
-                <input type="date" id="timelineDate" class="date-input" oninput="onDateChange()" style="padding:5px 8px;font-size:0.75rem;">
-                <!-- hidden menus tetap ada supaya JS tidak error -->
-                <span id="panelLabel" style="display:none;"></span>
-                <div id="panelDropdown" style="display:none;">
-                    <div id="panelMenu">
-                        <button class="hdr-option active" data-section-tab="timeline" onclick="selectPanel('timeline')">Timeline</button>
-                        <button class="hdr-option" data-section-tab="tasks" onclick="selectPanel('tasks')">Tasks</button>
-                        <button class="hdr-option" data-section-tab="summary" onclick="selectPanel('summary')">Summary</button>
-                        <button class="hdr-option" data-section-tab="agenda" onclick="selectPanel('agenda')">Agenda</button>
-                    </div>
-                </div>
-                <div id="viewDropdown" style="display:none;">
-                    <div id="viewMenu">
-                        <button class="hdr-option active" data-layout="straight" onclick="setLayoutModeDropdown('straight')">⟵ Straight Line</button>
-                        <button class="hdr-option" data-layout="uturn" onclick="setLayoutModeDropdown('uturn')">↩ U-Turn Loop</button>
-                    </div>
-                </div>
-                <button class="ubnav-straight-btn" onclick="setLayoutModeDropdown('uturn')" title="Masuk U-Turn Mode" style="margin-left:auto;">↩ U-Turn</button>
-            </header>
-
-            <div class="stage-grid" id="stageGrid">
-
-                <!-- ── TASK LIST ── -->
-                <section class="section-card p-5 md:p-6 flex flex-col app-section section-flex" id="taskSection" data-section="tasks">
-                    <div class="section-head">
-                        <div>
-                            <div class="section-kicker">Task List</div>
-                            <h2 class="font-serif text-xl text-textMain">Daftar Tugas</h2>
-                            <p class="section-sub">Semua task tersambung ke garis waktu di tengah.</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <button class="btn-action" onclick="exportJSON()" title="Export JSON">⬇ Export</button>
-                            <label class="btn-action" title="Import JSON" style="cursor:pointer;">⬆ Import<input type="file" accept=".json" id="importFile" class="hidden" onchange="importJSON(event)"></label>
-                            <button class="btn-action danger" onclick="clearAll()" title="Hapus semua task">✕ Clear</button>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-2 flex-wrap mb-4">
-                        <button class="filter-pill active" data-filter="all" onclick="setFilter('all')">All</button>
-                        <button class="filter-pill" data-filter="done" onclick="setFilter('done')">✓ Done</button>
-                    </div>
-
-                    <div class="flex-1 overflow-y-auto pr-1 task-scroll">
-                        <ul id="eventList" class="space-y-2">
-                            <li class="flex flex-col items-center justify-center h-full py-12 opacity-50" id="emptyState">
-                                <div class="text-3xl mb-2">✦</div>
-                                <h3 class="font-serif text-lg text-textMuted">No tasks yet</h3>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="section-divider"></div>
-
+        <div class="stage-grid" id="stageGrid">
+            
+            <section class="section-card p-5 md:p-6 app-section" id="taskSection" data-section="tasks">
+                <div class="section-head">
                     <div>
-                        <h3 class="font-serif text-lg text-textMain mb-3">Tambah Task</h3>
-                        <form id="eventForm" class="space-y-4">
-                            <div>
-                                <label class="form-label">Task Name</label>
-                                <input type="text" id="eventName" required class="form-input" placeholder="What needs to be done?">
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="form-label">Start Time</label>
-                                    <input type="time" id="startTime" required class="form-input">
-                                </div>
-                                <div>
-                                    <label class="form-label">End Time</label>
-                                    <input type="time" id="endTime" required class="form-input">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="form-label">Warna</label>
-                                <div class="color-picker-row" id="colorPicker"></div>
-                                <input type="hidden" id="category" value="purple">
-                            </div>
-                            <div>
-                                <label class="form-label">Notes <span class="opacity-50 lowercase">(optional)</span></label>
-                                <textarea id="eventNotes" class="form-input" rows="2" placeholder="Detail tambahan..."></textarea>
-                            </div>
-                            <div class="flex gap-2">
-                                <button type="submit" class="btn-save" id="btnSaveTask">Save Task</button>
-                                <button type="button" id="btnCancelEdit" class="hidden" onclick="cancelEdit()" style="padding:10px 14px; background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text-muted); font-size:0.85rem; cursor:pointer;">Cancel</button>
-                            </div>
-                        </form>
+                        <div class="section-kicker">Task List</div>
+                        <h2 class="font-serif text-xl text-textMain tracking-tight">Daftar Tugas</h2>
+                        <p class="section-sub">Semua task tersambung ke garis waktu di tengah.</p>
                     </div>
-                </section>
-
-                <!-- ── TIMELINE ── -->
-                <section class="section-card center-card p-4 md:p-8 app-section" id="timelineCard" data-section="timeline">
-
-                    <!-- Fullscreen header (shown in U-Turn mode) -->
-                    <div class="fullscreen-header">
-                        <div class="flex items-center gap-3">
-                            <span class="font-serif text-lg" style="color:var(--text);">Timeline ✦</span>
-                            <input type="date" id="timelineDateFs" class="date-input" oninput="onDateChangeFsSync()" style="padding:5px 8px;font-size:0.75rem;">
-                        </div>
-                        <button class="btn-fullscreen" onclick="setLayoutModeDropdown('straight')" style="border-color:var(--border-light);">⟵ Straight Line</button>
+                    <div class="flex items-center gap-2">
+                        <button class="btn-action" onclick="exportJSON()" title="Export JSON">⬇ Export</button>
+                        <label class="btn-action" title="Import JSON" style="cursor:pointer;">⬆ Import<input type="file" accept=".json" id="importFile" class="hidden" onchange="importJSON(event)"></label>
+                        <button class="btn-action danger" onclick="clearAll()" title="Hapus semua task">✕ Clear</button>
                     </div>
+                </div>
 
-                    <div class="relative w-full rounded-[var(--radius-sm)] border border-borderBase" id="timelineScroll" style="height: 580px; overflow-y: auto; overflow-x: hidden;">
-                        <div class="relative w-full" id="timelineWrapper" style="height: 1200px;">
+                <div class="flex gap-2 flex-wrap mb-4">
+                    <button class="filter-pill active" data-filter="all" onclick="setFilter('all')">All</button>
+                    <button class="filter-pill" data-filter="done" onclick="setFilter('done')">✓ Done</button>
+                </div>
 
-                            <svg id="baseSvg" class="absolute inset-0 pointer-events-none" style="z-index:0; width:100%; height:1200px;" preserveAspectRatio="none">
-                                <g id="baseTrackGroup"></g>
-                                <g id="curvesGroup"></g>
-                            </svg>
+                <div class="flex-1 overflow-y-auto pr-1 task-scroll">
+                    <ul id="eventList" class="space-y-2">
+                        <li class="flex flex-col items-center justify-center h-full py-12 opacity-50" id="emptyState">
+                            <div class="text-3xl mb-2">✦</div>
+                            <h3 class="font-serif text-lg text-textMuted tracking-tight">No tasks yet</h3>
+                        </li>
+                    </ul>
+                </div>
 
-                            <div id="timelineTicks" class="absolute inset-0" style="z-index:5; pointer-events:none;"></div>
-                            <div id="eventsCanvas" class="absolute inset-0" style="z-index:10;"></div>
+                <div class="section-divider"></div>
 
-                        </div>
-                    </div>
-
-                    <!-- Toolbar below timeline — hidden, replaced by View dropdown in header -->
-                    <div class="normal-header" style="display:none!important;">
-                        <select id="layoutMode" style="display:none;" onchange="changeLayoutMode(event.target.value)">
-                            <option value="straight">Straight Line</option>
-                            <option value="uturn">U-Turn Loop</option>
-                        </select>
-                    </div>
-                </section>
-
-                <!-- ── SUMMARY REPORT ── -->
-                <section class="section-card p-5 md:p-6 flex flex-col app-section section-flex" id="summarySection" data-section="summary">
-                    <div class="section-head">
+                <div class="mt-auto">
+                    <h3 class="font-serif text-lg text-textMain tracking-tight mb-3">Tambah Task</h3>
+                    <form id="eventForm" class="space-y-4">
                         <div>
-                            <div class="section-kicker">Summary Report</div>
-                            <h2 class="font-serif text-xl text-textMain">Ringkasan Hari Ini</h2>
-                            <p class="section-sub">Total progres dan distribusi fokus harian.</p>
+                            <label class="form-label">Task Name</label>
+                            <input type="text" id="eventName" required class="form-input" placeholder="What needs to be done?">
                         </div>
-                        <div class="date-badge" id="summaryBadge">Live</div>
-                    </div>
-
-                    <div id="statsPanel">
-                        <div class="grid grid-cols-2 gap-4" id="statsGrid">
-                            <div class="text-center">
-                                <div class="text-2xl font-serif text-textMain" id="statTotal">0h 0m</div>
-                                <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Total Scheduled</div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label">Start Time</label>
+                                <input type="time" id="startTime" required class="form-input">
                             </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-serif text-textMain" id="statDone">0 / 0</div>
-                                <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Completed</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-serif text-textMain" id="statFree">24h 0m</div>
-                                <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Free Time</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-serif text-textMain" id="statTasks">0</div>
-                                <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Total Tasks</div>
+                            <div>
+                                <label class="form-label">End Time</label>
+                                <input type="time" id="endTime" required class="form-input">
                             </div>
                         </div>
-                        <div class="mt-5 space-y-3" id="catBars"></div>
-                    </div>
-                </section>
-
-                <!-- ── AGENDA: DAFTAR KEGIATAN HARI INI ── -->
-                <section class="section-card p-5 md:p-6 flex flex-col app-section section-flex" id="agendaSection" data-section="agenda">
-                    <div class="section-head">
                         <div>
-                            <div class="section-kicker">Agenda Harian</div>
-                            <h2 class="font-serif text-xl text-textMain">Daftar Kegiatan</h2>
-                            <p class="section-sub">Kegiatan hari ini — sinkron dengan timeline.</p>
+                            <label class="form-label">Warna</label>
+                            <div class="color-picker-row" id="colorPicker"></div>
+                            <input type="hidden" id="category" value="purple">
                         </div>
-                        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-                            <span class="ag-date-badge" id="agDateBadge">—</span>
-                            <button class="ag-clear-btn" onclick="agClearExtra()">✕ Hapus tambahan</button>
+                        <div>
+                            <label class="form-label">Notes <span class="opacity-50 lowercase">(optional)</span></label>
+                            <textarea id="eventNotes" class="form-input" rows="2" placeholder="Detail tambahan..."></textarea>
+                        </div>
+                        <div class="flex gap-2">
+                            <button type="submit" class="btn-save" id="btnSaveTask">Save Task</button>
+                            <button type="button" id="btnCancelEdit" class="hidden" onclick="cancelEdit()" style="padding:10px 14px; background:var(--surface); border:1px solid var(--border-light); border-radius:var(--radius-sm); color:var(--text-muted); font-size:0.85rem; cursor:pointer;">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section-card app-section" id="timelineCard" data-section="timeline" style="border:none; box-shadow:none; border-radius:0;">
+                <div class="relative w-full rounded-[var(--radius-sm)] border border-borderBase" id="timelineScroll" style="flex:1; overflow-y:auto; overflow-x:hidden; background:var(--bg);">
+                    <div class="relative w-full" id="timelineWrapper" style="height: 1200px;">
+                        <svg id="baseSvg" class="absolute inset-0 pointer-events-none" style="z-index:0; width:100%; height:1200px;" preserveAspectRatio="none">
+                            <g id="baseTrackGroup"></g>
+                            <g id="curvesGroup"></g>
+                        </svg>
+                        <div id="timelineTicks" class="absolute inset-0" style="z-index:5; pointer-events:none;"></div>
+                        <div id="eventsCanvas" class="absolute inset-0" style="z-index:10;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card p-5 md:p-6 app-section" id="summarySection" data-section="summary">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Summary Report</div>
+                        <h2 class="font-serif text-xl text-textMain tracking-tight">Ringkasan Hari Ini</h2>
+                        <p class="section-sub">Total progres dan distribusi fokus harian.</p>
+                    </div>
+                    <div class="date-badge" id="summaryBadge">Live</div>
+                </div>
+
+                <div id="statsPanel" style="overflow-y:auto; flex:1;">
+                    <div class="grid grid-cols-2 gap-4" id="statsGrid">
+                        <div class="text-center bg-surface border border-borderBase p-4 rounded-[var(--radius-sm)]">
+                            <div class="text-2xl font-mono text-textMain" id="statTotal">0h 0m</div>
+                            <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Total Scheduled</div>
+                        </div>
+                        <div class="text-center bg-surface border border-borderBase p-4 rounded-[var(--radius-sm)]">
+                            <div class="text-2xl font-mono text-textMain" id="statDone">0 / 0</div>
+                            <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Completed</div>
+                        </div>
+                        <div class="text-center bg-surface border border-borderBase p-4 rounded-[var(--radius-sm)]">
+                            <div class="text-2xl font-mono text-textMain" id="statFree">24h 0m</div>
+                            <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Free Time</div>
+                        </div>
+                        <div class="text-center bg-surface border border-borderBase p-4 rounded-[var(--radius-sm)]">
+                            <div class="text-2xl font-mono text-textMain" id="statTasks">0</div>
+                            <div class="text-[0.65rem] text-textMuted mt-1 uppercase tracking-widest">Total Tasks</div>
                         </div>
                     </div>
+                    <div class="mt-6 space-y-4" id="catBars"></div>
+                </div>
+            </section>
 
-                    <!-- Progress bar -->
+            <section class="section-card p-5 md:p-6 app-section" id="agendaSection" data-section="agenda">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Agenda Harian</div>
+                        <h2 class="font-serif text-xl text-textMain tracking-tight">Daftar Kegiatan</h2>
+                        <p class="section-sub">Kegiatan hari ini — sinkron dengan timeline.</p>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                        <span class="ag-date-badge" id="agDateBadge">—</span>
+                        <button class="ag-clear-btn" onclick="agClearExtra()">✕ Hapus tambahan</button>
+                    </div>
+                </div>
+
+                <div class="flex-1 overflow-y-auto" style="display:flex; flex-direction:column;">
                     <div class="ag-progress-row">
                         <span class="ag-stat"><span class="ag-stat-val" id="agStatDone">0</span>/<span class="ag-stat-val" id="agStatTotal">0</span> selesai</span>
                         <div class="ag-prog-wrap"><div class="ag-prog-bar" id="agProgBar" style="width:0%"></div></div>
                         <span style="font-family:var(--mono);font-size:0.7rem;" id="agStatPct">0%</span>
                     </div>
 
-                    <!-- Events dari timeline -->
                     <div class="ag-section-label">⊹ Dari Timeline</div>
-                    <div class="ag-list" id="agTlList" style="max-height:240px;">
+                    <div class="ag-list" id="agTlList" style="flex-shrink:0;">
                         <div class="ag-empty" id="agTlEmpty">
                             <span style="font-size:1.4rem;opacity:0.3;">◈</span>
                             <span style="font-size:0.82rem;">Belum ada kegiatan di timeline hari ini.</span>
@@ -1208,7 +565,6 @@
 
                     <div class="section-divider"></div>
 
-                    <!-- Tambah kegiatan mandiri -->
                     <div class="ag-section-label">＋ Tambah Kegiatan</div>
                     <div class="ag-add-row">
                         <input type="time" class="ag-add-time" id="agAddTime">
@@ -1216,22 +572,20 @@
                         <button class="ag-add-btn" onclick="agAdd()">Tambah</button>
                     </div>
 
-                    <!-- Extra activities list -->
-                    <div class="ag-list" id="agExtraList" style="flex:1;min-height:0;">
+                    <div class="ag-list" id="agExtraList" style="flex:1;">
                         <div class="ag-empty" id="agExtraEmpty">
                             <span style="font-size:0.82rem;">Belum ada kegiatan tambahan.</span>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
     </div>
 
-    <!-- ── EDIT MODAL ── -->
     <div class="modal-overlay" id="editModal">
         <div class="modal-box">
             <div class="flex items-center justify-between mb-5">
-                <h3 class="font-serif text-lg text-textMain">Edit Task</h3>
+                <h3 class="font-serif text-lg text-textMain tracking-tight">Edit Task</h3>
                 <button onclick="closeEditModal()" style="background:none;border:none;color:var(--text-muted);font-size:1.2rem;cursor:pointer;">✕</button>
             </div>
             <div class="space-y-4">
@@ -1263,11 +617,10 @@
         </div>
     </div>
 
-    <!-- ── EXPORT PNG MODAL ── -->
     <div class="modal-overlay" id="exportModal">
         <div class="modal-box" style="max-width:360px;">
             <div class="flex items-center justify-between mb-2">
-                <h3 class="font-serif text-lg text-textMain">Export PNG</h3>
+                <h3 class="font-serif text-lg text-textMain tracking-tight">Export PNG</h3>
                 <button onclick="closeExportModal()" style="background:none;border:none;color:var(--text-muted);font-size:1.2rem;cursor:pointer;">✕</button>
             </div>
             <p class="text-xs text-textMuted mb-5" style="line-height:1.6;">Timeline akan di-render ke canvas dengan resolusi penuh — semua 24 jam terlihat dalam satu gambar.</p>
@@ -1289,15 +642,12 @@
         </div>
     </div>
 
-    <!-- ── COLLECTIONS MODAL ── -->
     <div class="coll-overlay" id="collModal">
         <div class="coll-panel">
-
-            <!-- Top bar -->
             <div class="coll-topbar">
                 <div style="display:flex;align-items:center;gap:10px;">
-                    <span class="font-serif" style="font-size:1.1rem;color:var(--text);">📁 Koleksi Timeline</span>
-                    <span style="font-size:0.65rem;font-family:var(--mono);color:var(--text-muted);background:var(--surface);padding:2px 8px;border-radius:999px;" id="collTotalBadge">0 tersimpan</span>
+                    <span class="font-serif tracking-tight" style="font-size:1.1rem;color:var(--text);">📁 Koleksi Timeline</span>
+                    <span style="font-size:0.65rem;font-family:var(--mono);color:var(--text-muted);background:var(--border);padding:2px 8px;border-radius:999px;" id="collTotalBadge">0 tersimpan</span>
                 </div>
                 <div style="display:flex;gap:8px;align-items:center;">
                     <button class="coll-save-btn" onclick="openSaveForm()">＋ Simpan Timeline Saat Ini</button>
@@ -1305,7 +655,6 @@
                 </div>
             </div>
 
-            <!-- Save form (inline, hidden by default) -->
             <div class="coll-save-form" id="collSaveForm">
                 <span style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap;">Nama:</span>
                 <input id="collSaveName" class="coll-save-input" placeholder="cth. Planning Juni, Kerja Kamis…" maxlength="60">
@@ -1315,10 +664,7 @@
                 <button onclick="closeSaveForm()" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.9rem;">✕</button>
             </div>
 
-            <!-- Body -->
             <div class="coll-body">
-
-                <!-- Sidebar -->
                 <div class="coll-sidebar">
                     <div class="coll-sidebar-head">Folder</div>
                     <div class="coll-folder-list" id="collFolderList"></div>
@@ -1326,8 +672,6 @@
                         <button class="coll-new-folder-btn" onclick="promptNewFolder()">＋ Folder Baru</button>
                     </div>
                 </div>
-
-                <!-- Main grid -->
                 <div class="coll-main">
                     <div class="coll-main-head">
                         <input class="coll-search" id="collSearch" placeholder="🔍  Cari timeline…" oninput="renderCollGrid()">
@@ -1335,18 +679,16 @@
                     </div>
                     <div class="coll-grid" id="collGrid"></div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- ── SETTINGS PANEL ── -->
     <div class="settings-overlay" id="settingsOverlay" onclick="closeSettings()"></div>
     <div class="settings-panel" id="settingsPanel">
         <div class="settings-hdr">
             <div class="flex items-center gap-2">
-                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" style="color:var(--text-muted);flex-shrink:0;"><path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.2 12.5a1.38 1.38 0 0 0 .28 1.52l.05.05a1.67 1.67 0 0 1-2.36 2.36l-.05-.05a1.38 1.38 0 0 0-1.52-.28 1.38 1.38 0 0 0-.83 1.26v.14a1.667 1.667 0 0 1-3.334 0v-.07a1.38 1.38 0 0 0-.9-1.26 1.38 1.38 0 0 0-1.52.28l-.05.05a1.67 1.67 0 0 1-2.36-2.36l.05-.05a1.38 1.38 0 0 0 .28-1.52 1.38 1.38 0 0 0-1.26-.83H2.5a1.667 1.667 0 0 1 0-3.334h.07a1.38 1.38 0 0 0 1.26-.9 1.38 1.38 0 0 0-.28-1.52l-.05-.05a1.67 1.67 0 0 1 2.36-2.36l.05.05a1.38 1.38 0 0 0 1.52.28h.07a1.38 1.38 0 0 0 .83-1.26V2.5a1.667 1.667 0 0 1 3.334 0v.07a1.38 1.38 0 0 0 .83 1.26 1.38 1.38 0 0 0 1.52-.28l.05-.05a1.67 1.67 0 0 1 2.36 2.36l-.05.05a1.38 1.38 0 0 0-.28 1.52v.07a1.38 1.38 0 0 0 1.26.83h.14a1.667 1.667 0 0 1 0 3.334h-.07a1.38 1.38 0 0 0-1.26.83Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="font-serif" style="font-size:1.05rem;color:var(--text);">Settings</span>
+                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" style="color:var(--text-muted);flex-shrink:0;"><path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.2 12.5a1.38 1.38 0 0 0 .28 1.52l.05.05a1.67 1.67 0 0 1-1.18 2.85 1.67 1.67 0 0 1-1.18-.49l-.05-.05a1.38 1.38 0 0 0-1.52-.28 1.38 1.38 0 0 0-.83 1.26v.14a1.667 1.667 0 0 1-3.334 0v-.07a1.38 1.38 0 0 0-.9-1.26 1.38 1.38 0 0 0-1.52.28l-.05.05a1.67 1.67 0 0 1-2.36-2.36l.05-.05a1.38 1.38 0 0 0 .28-1.52 1.38 1.38 0 0 0-1.26-.83H2.5a1.667 1.667 0 0 1 0-3.334h.07a1.38 1.38 0 0 0 1.26-.9 1.38 1.38 0 0 0-.28-1.52l-.05-.05a1.67 1.67 0 0 1 2.36-2.36l.05.05a1.38 1.38 0 0 0 1.52.28h.07a1.38 1.38 0 0 0 .83-1.26V2.5a1.667 1.667 0 0 1 3.334 0v.07a1.38 1.38 0 0 0 .83 1.26 1.38 1.38 0 0 0 1.52-.28l.05-.05a1.67 1.67 0 0 1 2.36 2.36l-.05.05a1.38 1.38 0 0 0-.28 1.52v.07a1.38 1.38 0 0 0 1.26.83h.14a1.667 1.667 0 0 1 0 3.334h-.07a1.38 1.38 0 0 0-1.26.83Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="font-serif tracking-tight" style="font-size:1.05rem;color:var(--text);">Settings</span>
             </div>
             <button class="settings-close-btn" onclick="closeSettings()">✕</button>
         </div>
@@ -1406,7 +748,6 @@
                 </div>
             </div>
             <div class="settings-divider"></div>
-            <!-- ── GITHUB GIST SYNC ── -->
             <div class="settings-section">
                 <div class="settings-section-label">GitHub Gist Sync</div>
                 <p class="settings-section-desc">Simpan &amp; muat data timeline lewat GitHub Gist pribadi kamu.</p>
@@ -1454,24 +795,20 @@
             <div class="settings-section">
                 <div class="settings-section-label">Tentang</div>
                 <div style="font-size:0.72rem;color:var(--text-muted);font-family:var(--mono);line-height:1.8;">
-                    <div>Timeline ✦ Smart U-Turn</div>
-                    <div style="opacity:0.55;">v8.5 · Data disimpan secara lokal di browser</div>
+                    <div>Timeline ✦ Smart Layout</div>
+                    <div style="opacity:0.55;">v9.0 · Data disimpan secara lokal di browser</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ── TOAST ── -->
     <div class="toast" id="toast"></div>
 
-    <!-- ── UTURN BOTTOM NAV (muncul saat U-Turn / fullscreen mode) ── -->
-    <nav id="uturnBottomNav" aria-label="U-Turn Navigation">
-        <!-- Baris atas: title + date picker -->
+    <nav id="bottomNav" aria-label="Bottom Navigation">
         <div class="ubnav-top-row">
             <span class="ubnav-title">Timeline ✦</span>
             <input type="date" id="hdrDateUturn" class="date-input" oninput="onHdrDateUturnChange()" style="padding:5px 8px;font-size:0.75rem;display:block;">
         </div>
-        <!-- Baris bawah: navigasi -->
         <div class="ubnav-bottom-row">
             <button class="ubnav-btn active" id="ubnav-timeline"  onclick="ubnavSelect('timeline')"  title="Timeline">⊹ Timeline</button>
             <div class="ubnav-divider"></div>
@@ -1486,62 +823,63 @@
                 </svg>
                 Settings
             </button>
-            <button class="ubnav-straight-btn" onclick="setLayoutModeDropdown('straight')" title="Kembali ke Straight Line">⟵ Straight Line</button>
+            <button class="ubnav-straight-btn" id="ubnav-layout-toggle" onclick="toggleLayoutMode()" title="Ganti Mode Layout">↩ U-Turn</button>
         </div>
     </nav>
 
-    <!-- ── DRAG TOOLTIP ── -->
     <div class="tl-drag-tooltip" id="tlDragTooltip"></div>
 
     <script>
+        function setActiveSection(name) {
+            const sections = document.querySelectorAll('.app-section');
+            sections.forEach(section => {
+                section.classList.toggle('is-active', section.dataset.section === name);
+            });
+            localStorage.setItem('tl_active_section', name);
 
-        // ── DROPDOWN HELPERS ──
-        function toggleDropdown(id) {
-            const el = document.getElementById(id);
-            const isOpen = el.classList.contains('open');
-            // close all
-            document.querySelectorAll('.hdr-dropdown.open').forEach(d => d.classList.remove('open'));
-            if (!isOpen) el.classList.add('open');
-        }
-        document.addEventListener('click', e => {
-            if (!e.target.closest('.hdr-dropdown')) {
-                document.querySelectorAll('.hdr-dropdown.open').forEach(d => d.classList.remove('open'));
+            if (name === 'timeline') {
+                requestAnimationFrame(() => {
+                    renderBaseTrack();
+                    renderTicks();
+                    renderTimeline();
+                });
+            } else if (name === 'tasks') {
+                renderQueue();
+            } else if (name === 'agenda') {
+                agRender();
             }
-        });
-        function selectPanel(name) {
-            document.getElementById('panelLabel').textContent = name.charAt(0).toUpperCase() + name.slice(1);
-            document.querySelectorAll('#panelMenu .hdr-option').forEach(o => o.classList.toggle('active', o.dataset.sectionTab === name));
-            document.getElementById('panelDropdown').classList.remove('open');
-            setActiveSection(name);
-            if (typeof syncUbnavActive === 'function') syncUbnavActive(name);
-        }
-        function selectTheme(theme) {
-            const labels = { dark: 'dark', light: 'light', miku: '✦ miku' };
-            document.querySelectorAll('#themeMenu .hdr-option').forEach(o => o.classList.toggle('active', o.dataset.theme === theme));
-            setTheme(theme);
-            syncSettingsTheme(theme);
         }
 
         // ── VIEW DROPDOWN HELPERS ──
-        function closeViewDropdown() {
-            document.getElementById('viewDropdown').classList.remove('open');
+        function toggleLayoutMode() {
+            const newMode = (currentLayoutMode === 'uturn') ? 'straight' : 'uturn';
+            changeLayoutMode(newMode);
         }
-        function setLayoutModeDropdown(mode) {
-            // Sync the hidden select so changeLayoutMode works
-            const sel = document.getElementById('layoutMode');
-            if (sel) { sel.value = mode; }
-            changeLayoutMode(mode);
-            syncViewDropdownMode(mode);
-            closeViewDropdown();
+
+        function changeLayoutMode(mode) {
+            currentLayoutMode = mode;
+            
+            const toggleBtn = document.getElementById('ubnav-layout-toggle');
+            if (toggleBtn) {
+                if (mode === 'uturn') {
+                    toggleBtn.innerHTML = '⟵ Straight Line';
+                } else {
+                    toggleBtn.innerHTML = '↩ U-Turn';
+                }
+            }
+            
+            // Automatically select timeline view so the user sees the layout change
+            ubnavSelect('timeline');
+            
+            renderBaseTrack();
+            renderTicks();
+            updateUI();
         }
-        function syncViewDropdownMode(mode) {
-            document.querySelectorAll('#viewMenu [data-layout]').forEach(o =>
-                o.classList.toggle('active', o.dataset.layout === mode));
-        }
-        function onDateChangeFsSync() {
-            const fsVal = document.getElementById('timelineDateFs')?.value;
-            if (fsVal) {
-                document.getElementById('timelineDate').value = fsVal;
+
+        function onHdrDateUturnChange() {
+            const v = document.getElementById('hdrDateUturn').value;
+            if (v) {
+                document.getElementById('timelineDate').value = v;
                 onDateChange();
             }
         }
@@ -1590,7 +928,6 @@
             if (!confirm('Hapus semua tasks aktif? Data task yang belum disimpan ke koleksi akan hilang.')) return;
             ['tl_events','tl_counter','tl_layout','tl_date'].forEach(k => localStorage.removeItem(k));
             events = []; eventIdCounter = 1; currentLayoutMode = 'straight';
-            document.getElementById('layoutMode').value = 'straight';
             renderBaseTrack(); renderTicks(); updateUI();
             updateCacheInfo();
             showToast('Tasks aktif dihapus ✓');
@@ -1608,7 +945,6 @@
                                   'coll_folders','coll_saved','coll_fcnt','coll_scnt'];
             keysToRemove.forEach(k => localStorage.removeItem(k));
             events = []; eventIdCounter = 1; currentLayoutMode = 'straight'; folders = []; savedTimelines = [];
-            document.getElementById('layoutMode').value = 'straight';
             setTheme('dark'); syncSettingsTheme('dark');
             renderBaseTrack(); renderTicks(); updateUI();
             updateCacheInfo();
@@ -1621,59 +957,19 @@
             document.querySelectorAll('.tpick').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.theme === theme);
             });
-            document.querySelectorAll('input[type="time"], select').forEach(input => {
-                input.style.colorScheme = (theme === 'dark') ? 'dark' : 'light';
-            });
-            document.querySelectorAll('input[type="date"]').forEach(input => {
+            document.querySelectorAll('input[type="time"], select, input[type="date"]').forEach(input => {
                 input.style.colorScheme = (theme === 'dark') ? 'dark' : 'light';
             });
             localStorage.setItem('tl_theme', theme);
         }
-
-        // ── SECTION SWITCHER ──
-        const sectionTabs = document.querySelectorAll('[data-section-tab]');
-        const sections = document.querySelectorAll('.app-section');
-        const stageGrid = document.getElementById('stageGrid');
-
-        function setActiveSection(name) {
-            sections.forEach(section => {
-                section.classList.toggle('is-active', section.dataset.section === name);
-            });
-            sectionTabs.forEach(tab => {
-                const isActive = tab.dataset.sectionTab === name;
-                tab.classList.toggle('active', isActive);
-                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-            });
-            stageGrid.classList.add('single');
-            localStorage.setItem('tl_active_section', name);
-            if (name === 'timeline') {
-                requestAnimationFrame(() => {
-                    // Ensure correct sizing when the panel was previously hidden.
-                    if (typeof renderBaseTrack === 'function') renderBaseTrack();
-                    if (typeof renderTicks === 'function') renderTicks();
-                    if (typeof renderTimeline === 'function') renderTimeline();
-                });
-            }
-            if (name === 'tasks') {
-                if (typeof renderQueue === 'function') renderQueue();
-            }
-            if (name === 'agenda') {
-                if (typeof agRender === 'function') agRender();
-            }
-        }
-
-        sectionTabs.forEach(tab => {
-            tab.addEventListener('click', () => setActiveSection(tab.dataset.sectionTab));
-        });
 
         // ── STATE ──
         let events = [];
         let eventIdCounter = 1;
         let activeFilter = 'all';
         let editingId = null;
-        let currentLayoutMode = 'straight'; // 'straight' or 'uturn'
-        let queueVisible = false;
-        const HALF_DAY = 720; // kept for backward compat (storage import)
+        let currentLayoutMode = 'straight';
+        const HALF_DAY = 720;
 
         // ── TIMELINE DRAG STATE ──
         let _tlDrag = null;
@@ -1690,7 +986,6 @@
             { key: 'orange', bg: '#e07a52' },
         ];
         const colorMap = Object.fromEntries(COLORS.map(c => [c.key, { bg: c.bg, label: c.key.charAt(0).toUpperCase() + c.key.slice(1) }]));
-        // Backward compat for events saved with old category keys
         colorMap.flow    = colorMap.purple;
         colorMap.accent  = colorMap.gold;
         colorMap.success = colorMap.green;
@@ -1698,7 +993,6 @@
 
         // ── COLOUR PICKER ──
         function initColorPicker(containerId, inputId, selected) {
-            // Normalize legacy keys
             const legacy = { flow:'purple', accent:'gold', success:'green', danger:'red' };
             const sel = legacy[selected] || selected || 'purple';
             const container = document.getElementById(containerId);
@@ -1734,20 +1028,19 @@
         const curvesGroup     = document.getElementById('curvesGroup');
         const timelineWrapper = document.getElementById('timelineWrapper');
 
-        const TIMELINE_H_BASE = 1200; // default px for 24 hours (straight mode)
-        const TIMELINE_W_BASE = 1200; // default px for 24 hours (U-Turn horizontal main axis)
-        const TIMELINE_PAD    = 44;   // whitespace padding (px)
-        // Returns current timeline dimensions (normal or fullscreen)
-        function getTimelineH() { return window._fsTimelineH || TIMELINE_H_BASE; }
-        function getTimelineW() { return window._fsTimelineW || TIMELINE_W_BASE; }
+        const TIMELINE_H_BASE = 1200;
+        const TIMELINE_W_BASE = 1200;
+        const TIMELINE_PAD    = 44;
+        
+        function getTimelineW() {
+            const scroll = document.getElementById('timelineScroll');
+            const scrollW = scroll.clientWidth || (window.innerWidth - 32);
+            return Math.max(scrollW, TIMELINE_W_BASE);
+        }
 
-        // Convert minute-of-day (0–1440) to main-axis px.
-        // - Straight mode: Y axis (top)
-        // - U-Turn mode: X axis (left), with 0–12 on top track L→R and 12–24 on bottom track R→L
-        //   Mapping aligns to the oval's tangency points (so 00:00 and 12:00 sit on the straight segments).
         function minToPx(min) {
             const pad = TIMELINE_PAD;
-            const spanStraight = getTimelineH() - pad * 2;
+            const spanStraight = TIMELINE_H_BASE - pad * 2;
 
             if (currentLayoutMode === 'straight') {
                 return pad + (min / 1440) * spanStraight;
@@ -1765,8 +1058,6 @@
             return (leftX + spanUturn) - (secondHalf / 720) * spanUturn;
         }
 
-        // Lane-aware mapping for U-Turn parallel tracks.
-        // Lanes expand outward visually, but tangency points (X mapping) stay the same.
         function minToPxUturnLane(min, laneIdx = 0) {
             if (currentLayoutMode === 'straight') return minToPx(min);
 
@@ -1800,17 +1091,12 @@
             return `${h}h ${m}m`;
         }
 
-        // ── PRIORITY (for overlap lane assignment) ──
-        // Longer events get higher priority → placed on left (lane 0).
         function getEventPriority(ev) {
             if (typeof ev.priority === 'number') return ev.priority;
             return ev.duration || 0;
         }
 
-        // Assign a `lane` index used to render parallel tracks when events overlap.
-        // Lane 0 = main track; lower-priority overlapping events get lane 1,2,...
         function assignTrackLanesForOverlaps() {
-            // Clear lane for safety
             events.forEach(ev => { ev.lane = 0; });
             if (!events.length) return;
 
@@ -1818,9 +1104,7 @@
             let cluster = [];
             let clusterEnd = -Infinity;
 
-            function overlaps(a, b) {
-                return a.startMin < b.endMin && a.endMin > b.startMin;
-            }
+            function overlaps(a, b) { return a.startMin < b.endMin && a.endMin > b.startMin; }
 
             function finalizeCluster(list) {
                 if (!list.length) return;
@@ -1832,7 +1116,7 @@
                     return (b.endMin - b.startMin) - (a.endMin - a.startMin);
                 });
 
-                const lanes = []; // lanes[i] = events placed in lane i
+                const lanes = [];
                 byPriority.forEach(ev => {
                     let placed = false;
                     for (let i = 0; i < lanes.length; i++) {
@@ -1869,7 +1153,6 @@
             finalizeCluster(cluster);
         }
 
-        // ── TOAST ──
         let toastTimer;
         function showToast(msg) {
             const t = document.getElementById('toast');
@@ -1884,24 +1167,20 @@
             const scroll  = document.getElementById('timelineScroll');
             const mode    = currentLayoutMode;
 
-            // Keep scroll behavior consistent with orientation
             if (mode === 'uturn') {
                 scroll.style.overflowX = 'auto';
-                // allow vertical scroll when multiple lanes push cards outward
                 scroll.style.overflowY = 'auto';
             } else {
                 scroll.style.overflowY = 'auto';
                 scroll.style.overflowX = 'hidden';
             }
 
-            const viewportW = scroll.clientWidth  || timelineWrapper.offsetWidth;
+            const viewportW = scroll.clientWidth || 300;
             const viewportH = scroll.clientHeight || 580;
 
             const W = (mode === 'uturn') ? getTimelineW() : viewportW;
-            let H = (mode === 'uturn') ? viewportH : getTimelineH();
+            let H = (mode === 'uturn') ? viewportH : Math.max(viewportH, TIMELINE_H_BASE);
 
-            // In U-Turn, grow the internal canvas height to fit stacked lanes.
-            // The outer panel stays the same size; the scroll container will scroll vertically.
             const centerX = Math.round(W / 2);
             let centerY = Math.round(H / 2);
 
@@ -1917,7 +1196,6 @@
                 const maxLaneTop    = Math.max(0, ...events.filter(e => e.startMin < 720).map(e => e.lane || 0));
                 const maxLaneBottom = Math.max(0, ...events.filter(e => e.startMin >= 720).map(e => e.lane || 0));
 
-                // Pin centerY so top cards sit just below the top edge with a small margin
                 const TOP_MARGIN   = 16;
                 const topCardSpace = TOP_MARGIN + (CARD_H_EST / 2) + (CONN_BASE + maxLaneTop * CONN_LANE) + DOT_R + (trackOffset + maxLaneTop * TRACK_GAP);
                 centerY = Math.round(topCardSpace);
@@ -1927,15 +1205,8 @@
                 H = Math.max(viewportH, neededH);
             }
 
-            // Keep wrapper in sync
-            if (mode === 'uturn') {
-                timelineWrapper.style.width  = W + 'px';
-                timelineWrapper.style.height = H + 'px';
-            } else {
-                // Match the visible scroll viewport width so the center line stays centered.
-                timelineWrapper.style.width  = viewportW + 'px';
-                timelineWrapper.style.height = H + 'px';
-            }
+            timelineWrapper.style.width  = W + 'px';
+            timelineWrapper.style.height = H + 'px';
 
             window._trackDims = { W, H, centerX, centerY };
 
@@ -1944,18 +1215,15 @@
             baseSvg.style.width  = '100%';
             baseSvg.style.height = H + 'px';
 
-            // Get computed color values
             const cs = getComputedStyle(document.body);
             const borderColor = cs.getPropertyValue('--border-light').trim() || '#263060';
 
             if (mode === 'straight') {
-                // Vertical center line (starts and ends at padding)
                 baseTrackGroup.innerHTML = `
                     <line x1="${centerX}" y1="${TIMELINE_PAD}" x2="${centerX}" y2="${H - TIMELINE_PAD}"
                           stroke="${borderColor}" stroke-width="2"/>
                 `;
             } else {
-                // U-Turn mode (horizontal): true oval/racetrack (rounded ends)
                 const trackOffset = 60;
                 const topY    = centerY - trackOffset;
                 const bottomY = centerY + trackOffset;
@@ -2008,7 +1276,6 @@
                     `;
                 }
 
-                // Half-hour subtle marks
                 for (let h = 0; h < 24; h++) {
                     const topPx = minToPx(h * 60 + 30);
                     const tickX = centerX;
@@ -2017,34 +1284,20 @@
                     `;
                 }
 
-                // ── DATE LABEL above the timeline (above 00:00 tick) ──
                 const dateStr = getDateLabel();
                 if (dateStr) {
-                    const topOfAxis = minToPx(0);   // = TIMELINE_PAD px
-                    const labelTopPx = topOfAxis / 2;  // vertically centered in the gap
-
-                    // Thin horizontal rule flanking the label
+                    const topOfAxis = minToPx(0);
+                    const labelTopPx = topOfAxis / 2;
                     const ruleW = 28;
                     const labelEl = document.createElement('div');
                     labelEl.style.cssText = `
-                        position:absolute;
-                        top:${labelTopPx}px;
-                        left:${centerX}px;
-                        transform:translate(-50%, -50%);
-                        display:flex; align-items:center; gap:8px;
-                        white-space:nowrap;
-                        z-index:3; pointer-events:none;
+                        position:absolute; top:${labelTopPx}px; left:${centerX}px;
+                        transform:translate(-50%, -50%); display:flex; align-items:center; gap:8px;
+                        white-space:nowrap; z-index:3; pointer-events:none;
                     `;
                     labelEl.innerHTML = `
                         <div style="width:${ruleW}px;height:1px;background:var(--border-light);border-radius:1px;opacity:0.7;"></div>
-                        <span style="
-                            font-family:var(--mono);
-                            font-size:0.6rem;
-                            color:var(--text-muted);
-                            letter-spacing:0.08em;
-                            text-transform:uppercase;
-                            opacity:0.85;
-                        ">${dateStr}</span>
+                        <span style="font-family:var(--mono);font-size:0.6rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;">${dateStr}</span>
                         <div style="width:${ruleW}px;height:1px;background:var(--border-light);border-radius:1px;opacity:0.7;"></div>
                     `;
                     timelineTicks.appendChild(labelEl);
@@ -2052,14 +1305,11 @@
                 return;
             }
 
-            // U-Turn horizontal ticks: main axis is X
             const { H, topY, bottomY, centerY } = dims;
             const HALF_GAP_U = 10;
             const TICK_LEN   = 8;
             const TICK_OP    = 0.5;
 
-            // Start from h=1 to skip h=0; h=24 renders 00:00 from the bottom track
-            // so the label sits in the center gap (same as 12:00 on the right side).
             for (let h = 1; h <= 24; h++) {
                 const xPx  = minToPx(h * 60);
                 const label = h === 24 ? '00:00' : `${h.toString().padStart(2,'0')}:00`;
@@ -2067,15 +1317,9 @@
                 const isTop  = (h * 60) <= 720;
                 const trackY = isTop ? topY : bottomY;
 
-                const outerTickTop = isTop
-                    ? trackY - HALF_GAP_U - TICK_LEN
-                    : trackY + HALF_GAP_U;
-                const innerTickTop = isTop
-                    ? trackY + HALF_GAP_U
-                    : trackY - HALF_GAP_U - TICK_LEN;
-                const labelTop = isTop
-                    ? trackY + HALF_GAP_U + TICK_LEN + 3
-                    : trackY - HALF_GAP_U - TICK_LEN - 3;
+                const outerTickTop = isTop ? trackY - HALF_GAP_U - TICK_LEN : trackY + HALF_GAP_U;
+                const innerTickTop = isTop ? trackY + HALF_GAP_U : trackY - HALF_GAP_U - TICK_LEN;
+                const labelTop = isTop ? trackY + HALF_GAP_U + TICK_LEN + 3 : trackY - HALF_GAP_U - TICK_LEN - 3;
                 const labelTransform = isTop ? 'translate(-50%, 0)' : 'translate(-50%, -100%)';
 
                 timelineTicks.innerHTML += `
@@ -2085,7 +1329,6 @@
                 `;
             }
 
-            // Half-hour subtle marks
             for (let h = 0; h < 24; h++) {
                 const xPx = minToPx(h * 60 + 30);
                 const isTop = (h * 60 + 30) <= 720;
@@ -2111,14 +1354,10 @@
                 const { W, centerX } = dims;
 
                 const HALF_GAP   = 26;
-                // Extend leftward so needle reaches behind the hour labels
-                // Labels sit with right-edge at ~(centerX - HALF_GAP + 2),
-                // left-edge ~38px further left → needle tip stops ~4px short of label left edge
-                const NEEDLE_EXTEND = 34;  // px past the tick gap, into label territory
+                const NEEDLE_EXTEND = 34;
                 const needleLeft  = centerX - HALF_GAP - NEEDLE_EXTEND;
                 const needleWidth = HALF_GAP + NEEDLE_EXTEND;
 
-                // z-index: 1 → needle sits BEHIND hour labels (z-index: 2)
                 const needle = document.createElement('div');
                 needle.className = 'time-needle';
                 needle.style.cssText = `
@@ -2128,100 +1367,71 @@
                 `;
                 timelineTicks.appendChild(needle);
 
-                // Separate dot on the axis at higher z-index so it's always visible
                 const dot = document.createElement('div');
                 dot.className = 'time-needle';
                 dot.style.cssText = `
                     position:absolute; top:${topPx}px; left:${centerX}px;
-                    transform:translate(-50%, -50%);
-                    width:7px; height:7px; border-radius:50%;
-                    background:var(--danger); border:2px solid var(--card);
-                    z-index:32; pointer-events:none;
+                    transform:translate(-50%, -50%); width:7px; height:7px; border-radius:50%;
+                    background:var(--danger); border:2px solid var(--card); z-index:32; pointer-events:none;
                 `;
                 timelineTicks.appendChild(dot);
 
-                // Red current-time label — also above everything (z-index: 31)
                 const label = document.createElement('div');
                 label.className = 'time-needle-label';
                 label.textContent = minutesToStr(nowMin);
                 label.style.cssText = `
                     position:absolute; top:${topPx}px; left:${needleLeft - 4}px;
-                    color:var(--danger); font-size:0.65rem;
-                    font-family:var(--mono); font-weight:600;
-                    z-index:31; white-space:nowrap;
-                    transform:translate(-100%, -50%);
-                    letter-spacing:0.03em;
+                    color:var(--danger); font-size:0.65rem; font-family:var(--mono); font-weight:600;
+                    z-index:31; white-space:nowrap; transform:translate(-100%, -50%); letter-spacing:0.03em;
                 `;
                 timelineTicks.appendChild(label);
                 return;
             }
 
-            // U-Turn: red indicator lives in the CENTER GAP (between topY and bottomY)
-            // so it never collides with event bars on either track.
             const { H, topY, bottomY, centerY: cY } = dims;
             const isNowTop = nowMin <= 720;
             const trackY   = isNowTop ? topY : bottomY;
             const midY     = cY || Math.round((topY + bottomY) / 2);
 
-            // Small dot ON the track line
             const dot = document.createElement('div');
             dot.className = 'time-needle';
             dot.style.cssText = `
-                position:absolute; left:${mainPx}px; top:${trackY}px;
-                transform:translate(-50%,-50%);
-                width:6px; height:6px; border-radius:50%;
-                background:var(--danger); border:2px solid var(--card);
-                z-index:31; pointer-events:none;
+                position:absolute; left:${mainPx}px; top:${trackY}px; transform:translate(-50%,-50%);
+                width:6px; height:6px; border-radius:50%; background:var(--danger); border:2px solid var(--card); z-index:31; pointer-events:none;
             `;
             timelineTicks.appendChild(dot);
 
-            // Thin vertical connector from track dot to center circle
             const connTop    = isNowTop ? trackY : midY;
             const connBottom = isNowTop ? midY   : trackY;
             const conn = document.createElement('div');
             conn.className = 'time-needle';
             conn.style.cssText = `
-                position:absolute; left:${mainPx}px; top:${connTop}px;
-                width:1.5px; height:${connBottom - connTop}px;
-                background:var(--danger); opacity:0.45;
-                transform:translateX(-50%);
-                border-radius:1px; z-index:30; pointer-events:none;
+                position:absolute; left:${mainPx}px; top:${connTop}px; width:1.5px; height:${connBottom - connTop}px;
+                background:var(--danger); opacity:0.45; transform:translateX(-50%); border-radius:1px; z-index:30; pointer-events:none;
             `;
             timelineTicks.appendChild(conn);
 
-            // Circle in the center gap with time label inside
             const CIRCLE_R = 18;
             const circle = document.createElement('div');
             circle.className = 'time-needle-label';
             circle.textContent = minutesToStr(nowMin);
             circle.style.cssText = `
-                position:absolute;
-                left:${mainPx}px; top:${midY}px;
-                transform:translate(-50%, -50%);
-                width:${CIRCLE_R * 2}px; height:${CIRCLE_R * 2}px;
-                border-radius:50%;
-                background:var(--danger); color:white;
-                font-size:0.52rem; font-family:var(--mono); font-weight:700;
-                display:flex; align-items:center; justify-content:center;
-                letter-spacing:0.02em; white-space:nowrap;
-                box-shadow:0 0 0 2.5px var(--card), 0 2px 8px rgba(224,82,82,0.45);
-                z-index:32; pointer-events:none;
+                position:absolute; left:${mainPx}px; top:${midY}px; transform:translate(-50%, -50%);
+                width:${CIRCLE_R * 2}px; height:${CIRCLE_R * 2}px; border-radius:50%; background:var(--danger); color:white;
+                font-size:0.52rem; font-family:var(--mono); font-weight:700; display:flex; align-items:center; justify-content:center;
+                letter-spacing:0.02em; white-space:nowrap; box-shadow:0 0 0 2.5px var(--card), 0 2px 8px rgba(224,82,82,0.45); z-index:32; pointer-events:none;
             `;
             timelineTicks.appendChild(circle);
         }
 
         // ── ASSIGN LANES ──
         function assignLanes() {
-            // Priority-based lane assignment for overlapping events
             assignTrackLanesForOverlaps();
-
-            // Side is used for card placement (straight) / track selection (uturn)
             const sorted = [...events].sort((a, b) => a.startMin - b.startMin);
             sorted.forEach((ev, idx) => {
                 if (currentLayoutMode === 'uturn') {
                     ev.side = (ev.startMin < 720) ? 'top' : 'bottom';
                 } else {
-                    // All lanes → right side; col = lane index
                     const lane = ev.lane || 0;
                     ev.side = 'right';
                     ev.col  = lane;
@@ -2236,57 +1446,6 @@
                 p.classList.toggle('active', p.dataset.filter === f);
             });
             renderQueue();
-        }
-
-        // ── LAYOUT MODE ──
-        function changeLayoutMode(mode) {
-            const wasUturn = currentLayoutMode === 'uturn';
-            const toUturn  = mode === 'uturn';
-            currentLayoutMode = mode;
-            document.getElementById('layoutMode').value = mode;
-            syncViewDropdownMode(mode);
-
-            // Masuk fullscreen saat uturn, keluar saat balik ke straight
-            if (toUturn && !isFullscreen) {
-                _enterFullscreen();
-            } else if (!toUturn && isFullscreen) {
-                _exitFullscreen();
-            }
-
-            // Tandai uturn di body supaya bottom nav & header uturn muncul
-            document.body.classList.toggle('uturn-active', toUturn);
-
-            // Reset ke timeline view saat masuk/keluar uturn
-            if (toUturn) {
-                setActiveSection('timeline');
-                if (typeof syncUbnavActive === 'function') syncUbnavActive('timeline');
-            }
-
-            // Sync tanggal ke input uturn
-            const _mainVal = document.getElementById('timelineDate').value;
-            const _uturnInp = document.getElementById('hdrDateUturn');
-            if (_uturnInp) {
-                _uturnInp.value = _mainVal;
-                _uturnInp.style.colorScheme = (localStorage.getItem('tl_theme') || 'dark') === 'dark' ? 'dark' : 'light';
-            }
-
-            renderBaseTrack();
-            renderTicks();
-            updateUI();
-        }
-
-        // ── TOGGLE QUEUE ──
-        function toggleQueue() {
-            queueVisible = !queueVisible;
-            const queueGrid = document.getElementById('queueGrid');
-            const btn = document.getElementById('queueToggleBtn');
-            if (queueVisible) {
-                queueGrid.style.display = 'grid';
-                btn.textContent = '⬆ Hide Queue';
-            } else {
-                queueGrid.style.display = 'none';
-                btn.textContent = '⬇ Show Queue';
-            }
         }
 
         // ── RENDER QUEUE ──
@@ -2331,7 +1490,6 @@
                     </div>
                 `;
 
-                // Drag events
                 li.addEventListener('dragstart', e => {
                     e.dataTransfer.effectAllowed = 'move';
                     e.dataTransfer.setData('text/plain', ev.id);
@@ -2388,19 +1546,17 @@
 
             const { W, centerX } = window._trackDims;
             const HALF_GAP  = 26;
-            const BAR_W     = 4;    // width of the vertical bar indicator on axis edge
-            const AXIS_PAD  = 10;   // gap between axis edge and card
+            const BAR_W     = 4;
+            const AXIS_PAD  = 10;
             const DOT_R     = 5;
 
-            // Space budgets
             const LEFT_AVAIL   = centerX - HALF_GAP - AXIS_PAD - 6;
             const RIGHT_AVAIL  = W - (centerX + HALF_GAP + AXIS_PAD) - 6;
-            const CARD_GAP_R   = 6;  // horizontal gap between right col-0 and col-1
+            const CARD_GAP_R   = 6;
             const CARD_W_L     = Math.min(180, LEFT_AVAIL);
-            const CARD_W_R_1   = Math.min(190, RIGHT_AVAIL);            // single right column
-            const CARD_W_R_2   = Math.min(140, (RIGHT_AVAIL - CARD_GAP_R) / 2); // double columns
+            const CARD_W_R_1   = Math.min(190, RIGHT_AVAIL);
+            const CARD_W_R_2   = Math.min(140, (RIGHT_AVAIL - CARD_GAP_R) / 2);
 
-            // Helper: does this event's time slot share the right side with a col-1 event?
             function hasRightDoubleCol(ev) {
                 return events.some(other =>
                     other !== ev &&
@@ -2417,98 +1573,38 @@
                 const col        = ev.col || 0;
                 const alpha      = ev.done ? 0.3 : 1;
 
-                // Decide card width: right side uses narrow cols only when col-1 exists
                 const useDouble = !isLeft && hasRightDoubleCol(ev);
                 const cardW     = isLeft ? CARD_W_L : (useDouble ? CARD_W_R_2 : CARD_W_R_1);
+                const barLeft   = centerX - Math.floor(BAR_W / 2);
+                const CONN_PAD  = 10;
+                const cardX     = centerX + DOT_R + CONN_PAD + col * (CARD_W_R_2 + CARD_GAP_R);
 
-                // Bar & dot sit directly ON the main timeline axis (centerX)
-                const barLeft = centerX - Math.floor(BAR_W / 2);
-
-                // Card starts just past the dot edge
-                const CONN_PAD = 10;
-                const cardX = centerX + DOT_R + CONN_PAD + col * (CARD_W_R_2 + CARD_GAP_R);
-
-                // ── GROUP ──
                 const group = document.createElement('div');
                 group.className = 'tl-event-group';
                 group.dataset.evId = ev.id;
 
-                // ── 1. VERTICAL BAR on the main axis ──
                 const segTopPx = Math.min(startTopPx, endTopPx);
                 const segH     = Math.max(BAR_W, Math.abs(endTopPx - startTopPx));
                 const seg = document.createElement('div');
-                seg.style.cssText = `
-                    position:absolute;
-                    top:${segTopPx}px;
-                    left:${barLeft}px;
-                    width:${BAR_W}px;
-                    height:${segH}px;
-                    background:${style.bg};
-                    border-radius:2px;
-                    opacity:${alpha};
-                    z-index:8;
-                `;
+                seg.style.cssText = `position:absolute; top:${segTopPx}px; left:${barLeft}px; width:${BAR_W}px; height:${segH}px; background:${style.bg}; border-radius:2px; opacity:${alpha}; z-index:8;`;
                 group.appendChild(seg);
 
-                // ── 2. DOT at start time (centered on axis) ──
                 const dot = document.createElement('div');
-                dot.style.cssText = `
-                    position:absolute;
-                    top:${startTopPx}px;
-                    left:${centerX}px;
-                    transform:translate(-50%,-50%);
-                    width:${DOT_R * 2}px;
-                    height:${DOT_R * 2}px;
-                    border-radius:50%;
-                    background:${style.bg};
-                    border:2px solid var(--card);
-                    z-index:16;
-                    opacity:${alpha};
-                `;
+                dot.style.cssText = `position:absolute; top:${startTopPx}px; left:${centerX}px; transform:translate(-50%,-50%); width:${DOT_R * 2}px; height:${DOT_R * 2}px; border-radius:50%; background:${style.bg}; border:2px solid var(--card); z-index:16; opacity:${alpha};`;
                 group.appendChild(dot);
 
-                // ── 2b. HORIZONTAL CONNECTOR from dot to card ──
                 const connX0 = centerX + DOT_R;
                 const connW  = Math.max(0, cardX - connX0);
                 const conn   = document.createElement('div');
-                conn.style.cssText = `
-                    position:absolute;
-                    top:${startTopPx}px;
-                    left:${connX0}px;
-                    width:${connW}px;
-                    height:2px;
-                    background:${style.bg};
-                    opacity:${alpha * 0.5};
-                    transform:translateY(-50%);
-                    z-index:14;
-                    border-radius:1px;
-                `;
+                conn.style.cssText = `position:absolute; top:${startTopPx}px; left:${connX0}px; width:${connW}px; height:2px; background:${style.bg}; opacity:${alpha * 0.5}; transform:translateY(-50%); z-index:14; border-radius:1px;`;
                 group.appendChild(conn);
 
-                // ── 3. PILL CARD ──
                 const card = document.createElement('div');
                 const doneStyle = ev.done ? 'text-decoration:line-through;opacity:0.7;' : '';
                 card.className = 'tl-drag-card';
                 card.dataset.evId = ev.id;
-                card.style.cssText = `
-                    position:absolute;
-                    top:${startTopPx}px;
-                    left:${cardX}px;
-                    transform:translateY(-50%);
-                    background:${style.bg};
-                    border-radius:999px;
-                    padding:5px 16px 5px 14px;
-                    width:${cardW}px;
-                    z-index:20;
-                    opacity:${alpha};
-                    overflow:hidden;
-                    white-space:nowrap;
-                    user-select:none;
-                    transition:filter 0.15s, transform 0.08s;
-                `;
-                card.innerHTML = `
-                    <div style="font-family:var(--font);font-size:0.76rem;font-weight:400;color:rgba(255,255,255,0.97);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;${doneStyle}">${ev.name}<span style="font-family:var(--mono);font-size:0.54rem;color:rgba(255,255,255,0.6);margin-left:6px;">${ev.startStr}–${ev.endStr} · ${formatDur(ev.duration)}</span></div>
-                `;
+                card.style.cssText = `position:absolute; top:${startTopPx}px; left:${cardX}px; transform:translateY(-50%); background:${style.bg}; border-radius:999px; padding:5px 16px 5px 14px; width:${cardW}px; z-index:20; opacity:${alpha}; overflow:hidden; white-space:nowrap; user-select:none; transition:filter 0.15s, transform 0.08s;`;
+                card.innerHTML = `<div style="font-family:var(--font);font-size:0.76rem;font-weight:400;color:rgba(255,255,255,0.97);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;${doneStyle}">${ev.name}<span style="font-family:var(--mono);font-size:0.54rem;color:rgba(255,255,255,0.6);margin-left:6px;">${ev.startStr}–${ev.endStr} · ${formatDur(ev.duration)}</span></div>`;
 
                 if (!ev.done) {
                     card.addEventListener('mousedown', e => startTimelineDrag(e, ev.id), { passive: false });
@@ -2522,7 +1618,6 @@
             renderCurrentTime();
         }
 
-        // ── RENDER TIMELINE (U-TURN HORIZONTAL) ──
         function renderTimelineUturn() {
             if (!window._trackDims) return;
 
@@ -2530,14 +1625,13 @@
             const { W, H, topY, bottomY, centerY } = dims;
             const R = Math.max(0, Number(dims.uturnRadius || 0));
             const rightX0 = Number(dims.uturnRightX || (W - TIMELINE_PAD - R));
-            const rightExtreme = rightX0 + R;
 
             const DOT_R      = 7;
             const CONN_BASE  = 36;
-            const CONN_LANE  = 36; // consistent spacing per lane so cards don't collide
+            const CONN_LANE  = 36;
             const SEG_W      = 6;
             const CARD_W     = 210;
-            const TRACK_GAP  = 10; // px spacing between parallel tracks
+            const TRACK_GAP  = 10;
 
             events.forEach(ev => {
                 const style   = colorMap[ev.category];
@@ -2546,14 +1640,13 @@
                 const laneIdx = ev.lane || 0;
                 const connLen = CONN_BASE + laneIdx * CONN_LANE;
 
-                // Lanes expand OUTWARD from the oval
                 const laneOffsetRaw = laneIdx * TRACK_GAP;
                 const maxOut = Math.max(0, Math.min((centerY - R) - TIMELINE_PAD, (H - TIMELINE_PAD) - (centerY + R)));
                 const laneOffset = Math.min(laneOffsetRaw, maxOut);
                 const Rk = R + laneOffset;
                 const topYk = centerY - Rk;
                 const bottomYk = centerY + Rk;
-                const rightXk = rightX0; // keep tangency X fixed
+                const rightXk = rightX0;
 
                 const startX = minToPxUturnLane(ev.startMin, ev.lane || 0);
                 const endX   = minToPxUturnLane(ev.endMin, ev.lane || 0);
@@ -2567,9 +1660,7 @@
                 const crossesApex = ev.startMin < 720 && ev.endMin > 720;
                 const apexX = minToPxUturnLane(720, ev.lane || 0);
 
-                // ── 1) COLORED SEGMENT(S) ──
                 if (crossesApex) {
-                    // Connect through the right arc so the segment looks continuous
                     if (R > 0 && curvesGroup) {
                         const a = ev.done ? 0.25 : 0.9;
                         curvesGroup.innerHTML += `
@@ -2578,132 +1669,51 @@
                                   stroke-linecap="round" opacity="${a}" />
                         `;
                     }
-                    // Top segment: start → 12:00
                     {
                         const x1 = startX;
                         const x2 = apexX;
                         const left = Math.min(x1, x2);
                         const w = Math.max(SEG_W, Math.abs(x2 - x1));
                         const seg = document.createElement('div');
-                        seg.style.cssText = `
-                            position:absolute;
-                            left:${left}px;
-                            top:${topYk - SEG_W / 2}px;
-                            width:${w}px;
-                            height:${SEG_W}px;
-                            background:${style.bg};
-                            border-radius:3px;
-                            opacity:${alpha};
-                            z-index:8;
-                            ${glow}
-                        `;
+                        seg.style.cssText = `position:absolute; left:${left}px; top:${topYk - SEG_W / 2}px; width:${w}px; height:${SEG_W}px; background:${style.bg}; border-radius:3px; opacity:${alpha}; z-index:8; ${glow}`;
                         group.appendChild(seg);
                     }
-                    // Bottom segment: 12:00 → end
                     {
                         const x1 = apexX;
                         const x2 = endX;
                         const left = Math.min(x1, x2);
                         const w = Math.max(SEG_W, Math.abs(x2 - x1));
                         const seg = document.createElement('div');
-                        seg.style.cssText = `
-                            position:absolute;
-                            left:${left}px;
-                            top:${bottomYk - SEG_W / 2}px;
-                            width:${w}px;
-                            height:${SEG_W}px;
-                            background:${style.bg};
-                            border-radius:3px;
-                            opacity:${alpha};
-                            z-index:8;
-                            ${glow}
-                        `;
+                        seg.style.cssText = `position:absolute; left:${left}px; top:${bottomYk - SEG_W / 2}px; width:${w}px; height:${SEG_W}px; background:${style.bg}; border-radius:3px; opacity:${alpha}; z-index:8; ${glow}`;
                         group.appendChild(seg);
                     }
                 } else {
                     const left = Math.min(startX, endX);
                     const w = Math.max(SEG_W, Math.abs(endX - startX));
                     const seg = document.createElement('div');
-                    seg.style.cssText = `
-                        position:absolute;
-                        left:${left}px;
-                        top:${trackY - SEG_W / 2}px;
-                        width:${w}px;
-                        height:${SEG_W}px;
-                        background:${style.bg};
-                        border-radius:3px;
-                        opacity:${alpha};
-                        z-index:8;
-                        ${glow}
-                    `;
+                    seg.style.cssText = `position:absolute; left:${left}px; top:${trackY - SEG_W / 2}px; width:${w}px; height:${SEG_W}px; background:${style.bg}; border-radius:3px; opacity:${alpha}; z-index:8; ${glow}`;
                     group.appendChild(seg);
                 }
 
-                // ── 2) DOT ──
                 const dot = document.createElement('div');
-                dot.style.cssText = `
-                    position:absolute;
-                    left:${startX}px;
-                    top:${trackY}px;
-                    transform:translate(-50%,-50%);
-                    width:${DOT_R * 2}px;
-                    height:${DOT_R * 2}px;
-                    border-radius:50%;
-                    background:${style.bg};
-                    border:3px solid var(--card);
-                    z-index:16;
-                    opacity:${alpha};
-                    ${glow}
-                `;
+                dot.style.cssText = `position:absolute; left:${startX}px; top:${trackY}px; transform:translate(-50%,-50%); width:${DOT_R * 2}px; height:${DOT_R * 2}px; border-radius:50%; background:${style.bg}; border:3px solid var(--card); z-index:16; opacity:${alpha}; ${glow}`;
                 group.appendChild(dot);
 
-                // ── 3) CONNECTOR (vertical) ──
                 const conn = document.createElement('div');
                 const connTop = isTop ? (trackY - DOT_R - connLen) : (trackY + DOT_R);
-                conn.style.cssText = `
-                    position:absolute;
-                    left:${startX}px;
-                    top:${connTop}px;
-                    width:2px;
-                    height:${connLen}px;
-                    background:${style.bg};
-                    transform:translateX(-50%);
-                    opacity:${ev.done ? 0.25 : 0.75};
-                    z-index:12;
-                    border-radius:1px;
-                `;
+                conn.style.cssText = `position:absolute; left:${startX}px; top:${connTop}px; width:2px; height:${connLen}px; background:${style.bg}; transform:translateX(-50%); opacity:${ev.done ? 0.25 : 0.75}; z-index:12; border-radius:1px;`;
                 group.appendChild(conn);
 
-                // ── 4) PILL CARD ──
                 const doneStyle = ev.done ? 'text-decoration:line-through;opacity:0.7;' : '';
                 const card = document.createElement('div');
                 card.className = 'tl-drag-card';
                 card.dataset.evId = ev.id;
 
                 const safeX = Math.min(Math.max(startX, CARD_W / 2 + 10), W - CARD_W / 2 - 10);
-                const cardCenterY = isTop
-                    ? (trackY - DOT_R - connLen - 14)
-                    : (trackY + DOT_R + connLen + 14);
+                const cardCenterY = isTop ? (trackY - DOT_R - connLen - 14) : (trackY + DOT_R + connLen + 14);
 
-                card.style.cssText = `
-                    position:absolute;
-                    left:${safeX}px;
-                    top:${cardCenterY}px;
-                    transform:translate(-50%,-50%);
-                    background:${style.bg};
-                    border-radius:999px;
-                    padding:5px 16px 5px 14px;
-                    width:${CARD_W}px;
-                    z-index:20;
-                    opacity:${alpha};
-                    overflow:hidden;
-                    white-space:nowrap;
-                    user-select:none;
-                    transition:filter 0.15s, transform 0.08s;
-                `;
-                card.innerHTML = `
-                    <div style="font-family:var(--font);font-size:0.76rem;font-weight:400;color:rgba(255,255,255,0.97);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;${doneStyle}">${ev.name}<span style="font-family:var(--mono);font-size:0.54rem;color:rgba(255,255,255,0.6);margin-left:6px;">${ev.startStr}–${ev.endStr} · ${formatDur(ev.duration)}</span></div>
-                `;
+                card.style.cssText = `position:absolute; left:${safeX}px; top:${cardCenterY}px; transform:translate(-50%,-50%); background:${style.bg}; border-radius:999px; padding:5px 16px 5px 14px; width:${CARD_W}px; z-index:20; opacity:${alpha}; overflow:hidden; white-space:nowrap; user-select:none; transition:filter 0.15s, transform 0.08s;`;
+                card.innerHTML = `<div style="font-family:var(--font);font-size:0.76rem;font-weight:400;color:rgba(255,255,255,0.97);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;${doneStyle}">${ev.name}<span style="font-family:var(--mono);font-size:0.54rem;color:rgba(255,255,255,0.6);margin-left:6px;">${ev.startStr}–${ev.endStr} · ${formatDur(ev.duration)}</span></div>`;
 
                 if (!ev.done) {
                     card.addEventListener('mousedown', e => startTimelineDrag(e, ev.id), { passive: false });
@@ -2718,24 +1728,20 @@
         // ── TIMELINE DRAG HELPERS ──
         function pxToMinDelta(px, originMin, laneIdx = 0) {
             if (currentLayoutMode === 'straight') {
-                const H = getTimelineH();
+                const H = TIMELINE_H_BASE;
                 return px * 1440 / (H - TIMELINE_PAD * 2);
             }
-            // U-Turn horizontal: each half-day spans full width
             const dims = window._trackDims || {};
             const R = Math.max(0, Number(dims.uturnRadius || 0));
             const W = getTimelineW();
-            const sign = (originMin < 720) ? 1 : -1; // bottom track runs right → left
+            const sign = (originMin < 720) ? 1 : -1;
             const span = Math.max(1, W - TIMELINE_PAD * 2 - R * 2);
             return sign * px * 720 / span;
         }
 
-        function snapTo30(min) {
-            return Math.round(min / 30) * 30;
-        }
+        function snapTo30(min) { return Math.round(min / 30) * 30; }
 
         function startTimelineDrag(e, evId) {
-            // Ignore if clicking a modal trigger or if done
             if (e.button !== undefined && e.button !== 0) return;
             e.preventDefault();
             e.stopPropagation();
@@ -2758,13 +1764,11 @@
                 _currentEnd:   ev.endMin
             };
 
-            // Visual feedback
             const group = eventsCanvas.querySelector(`.tl-event-group[data-ev-id="${evId}"]`);
             const card  = eventsCanvas.querySelector(`.tl-drag-card[data-ev-id="${evId}"]`);
             if (group) group.classList.add('is-dragging');
             if (card)  card.classList.add('dragging-active');
 
-            // Show tooltip
             const tooltip = document.getElementById('tlDragTooltip');
             tooltip.textContent = `${ev.startStr} – ${ev.endStr}`;
             tooltip.classList.add('visible');
@@ -2784,43 +1788,34 @@
             const clientY = e.touches ? e.touches[0].clientY : e.clientY;
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
-            const deltaPx   = (currentLayoutMode === 'uturn')
-                ? (clientX - _tlDrag.startX)
-                : (clientY - _tlDrag.startY);
+            const deltaPx   = (currentLayoutMode === 'uturn') ? (clientX - _tlDrag.startX) : (clientY - _tlDrag.startY);
             const deltaMin  = pxToMinDelta(deltaPx, _tlDrag.origStartMin, _tlDrag.lane);
             const snapped   = snapTo30(deltaMin);
 
             let newStart = _tlDrag.origStartMin + snapped;
             let newEnd   = newStart + _tlDrag.duration;
 
-            // Clamp to 00:00 – 24:00
             if (newStart < 0)    { newStart = 0; newEnd = _tlDrag.duration; }
             if (newEnd   > 1440) { newEnd = 1440; newStart = 1440 - _tlDrag.duration; }
 
-            // Snap to valid 30-min boundary after clamp
             newStart = Math.round(newStart / 30) * 30;
             newEnd   = newStart + _tlDrag.duration;
 
             _tlDrag._currentStart = newStart;
             _tlDrag._currentEnd   = newEnd;
 
-            // Translate the entire group visually
             const origPx = (currentLayoutMode === 'uturn')
-                ? minToPxUturnLane(_tlDrag.origStartMin, _tlDrag.lane)
-                : minToPx(_tlDrag.origStartMin);
+                ? minToPxUturnLane(_tlDrag.origStartMin, _tlDrag.lane) : minToPx(_tlDrag.origStartMin);
             const newPx  = (currentLayoutMode === 'uturn')
-                ? minToPxUturnLane(newStart, _tlDrag.lane)
-                : minToPx(newStart);
+                ? minToPxUturnLane(newStart, _tlDrag.lane) : minToPx(newStart);
             const translate = newPx - origPx;
 
             const group = eventsCanvas.querySelector(`.tl-event-group[data-ev-id="${_tlDrag.evId}"]`);
             if (group) {
                 group.style.transform = (currentLayoutMode === 'uturn')
-                    ? `translateX(${translate}px)`
-                    : `translateY(${translate}px)`;
+                    ? `translateX(${translate}px)` : `translateY(${translate}px)`;
             }
 
-            // Update tooltip
             const tooltip = document.getElementById('tlDragTooltip');
             const newStartStr = minutesToStr(newStart);
             const newEndStr   = minutesToStr(newEnd);
@@ -2837,7 +1832,6 @@
             document.removeEventListener('mouseup',   onTimelineDragEnd);
             document.removeEventListener('touchend',  onTimelineDragEnd);
 
-            // Hide tooltip
             document.getElementById('tlDragTooltip').classList.remove('visible');
 
             const newStart = _tlDrag._currentStart;
@@ -2855,7 +1849,6 @@
                     showToast(`"${ev.name}" → ${ev.startStr}–${ev.endStr} ✓`);
                 }
             } else {
-                // Just clean up visual state without full re-render
                 const group = eventsCanvas.querySelector(`.tl-event-group[data-ev-id="${_tlDrag.evId}"]`);
                 const card  = eventsCanvas.querySelector(`.tl-drag-card[data-ev-id="${_tlDrag.evId}"]`);
                 if (group) { group.classList.remove('is-dragging'); group.style.transform = ''; }
@@ -2904,13 +1897,8 @@
         // ── UPDATE UI ──
         function updateUI() {
             assignLanes();
-
-            // In U-Turn, base track height depends on max lane count.
-            // Re-render it after lane assignment so cards never collapse.
-            if (currentLayoutMode === 'uturn') {
-                renderBaseTrack();
-                renderTicks();
-            }
+            renderBaseTrack();
+            renderTicks();
             renderQueue();
             renderStats();
 
@@ -2924,7 +1912,6 @@
 
             renderTimeline();
             saveToStorage();
-            // Refresh agenda panel whenever events change
             if (typeof agRefresh === 'function') agRefresh();
         }
 
@@ -2948,26 +1935,21 @@
             const theme = localStorage.getItem('tl_theme') || 'dark';
             setTheme(theme);
 
-            // Load layout mode
             currentLayoutMode = localStorage.getItem('tl_layout') || 'straight';
-            document.getElementById('layoutMode').value = currentLayoutMode;
-            syncViewDropdownMode(currentLayoutMode);
-            if (currentLayoutMode === 'uturn') {
-                document.body.classList.add('uturn-active');
-                setTimeout(() => _enterFullscreen(), 80);
+            const toggleBtn = document.getElementById('ubnav-layout-toggle');
+            if (toggleBtn) {
+                if (currentLayoutMode === 'uturn') {
+                    toggleBtn.innerHTML = '⟵ Straight Line';
+                } else {
+                    toggleBtn.innerHTML = '↩ U-Turn';
+                }
             }
 
-            // Load date
             const savedDate = localStorage.getItem('tl_date') || new Date().toISOString().slice(0,10);
             document.getElementById('timelineDate').value = savedDate;
-            document.getElementById('timelineDate').style.colorScheme = (theme === 'dark') ? 'dark' : 'light';
+            document.getElementById('hdrDateUturn').value = savedDate;
+            document.getElementById('hdrDateUturn').style.colorScheme = (theme === 'dark') ? 'dark' : 'light';
             updateDateBadge(savedDate);
-            // Sync uturn date input
-            const _uturnDateEl = document.getElementById('hdrDateUturn');
-            if (_uturnDateEl) {
-                _uturnDateEl.value = savedDate;
-                _uturnDateEl.style.colorScheme = (theme === 'dark') ? 'dark' : 'light';
-            }
         }
 
         // ── DELETE ──
@@ -3033,7 +2015,6 @@
             showToast(`"${ev.name}" diperbarui ✓`);
         }
 
-        // Click outside modal to close
         document.getElementById('editModal').addEventListener('click', function(e) {
             if (e.target === this) closeEditModal();
         });
@@ -3089,11 +2070,7 @@
             const v = document.getElementById('timelineDate').value;
             updateDateBadge(v);
             saveToStorage();
-            renderTicks();  // refresh date label above timeline
-            // Sync uturn date input
-            const _uturnInp = document.getElementById('hdrDateUturn');
-            if (_uturnInp) _uturnInp.value = v;
-            // Refresh agenda panel
+            renderTicks();
             if (typeof agRefresh === 'function') agRefresh();
         }
 
@@ -3142,7 +2119,6 @@
                 canvas.height = cH;
                 const ctx = canvas.getContext('2d');
 
-                // Resolve CSS variables
                 const cs  = getComputedStyle(document.body);
                 const clr = v => cs.getPropertyValue(v).trim();
                 const C = {
@@ -3159,12 +2135,11 @@
                 };
                 const evClr = { flow: C.flow, accent: C.accent, success: C.success, danger: C.danger };
 
-                // Layout constants (scale relative to shorter dimension so portrait works correctly)
-                const s      = Math.min(cW, cH) / 1080; // scale factor
-                const OUTER  = Math.round(48 * s); // outer padding
+                const s      = Math.min(cW, cH) / 1080;
+                const OUTER  = Math.round(48 * s);
                 const isPortrait = cH > cW;
                 const HDR_H  = isPortrait ? Math.round(80 * s) : Math.round(110 * s);
-                const TL_PAD = Math.round(44 * s); // inner timeline whitespace top/bottom
+                const TL_PAD = Math.round(44 * s);
                 const CX     = cW / 2;
 
                 const tlTop    = OUTER + HDR_H;
@@ -3175,34 +2150,29 @@
                     return tlTop + TL_PAD + (min / 1440) * (tlH - TL_PAD * 2);
                 }
 
-                // ── Background ──
                 ctx.fillStyle = C.bg;
                 ctx.fillRect(0, 0, cW, cH);
 
-                // ── Card background ──
                 const cardR = Math.round(16 * s);
                 roundRectPath(ctx, OUTER * 0.5, OUTER * 0.5, cW - OUTER, cH - OUTER, cardR);
                 ctx.fillStyle = C.card;
                 ctx.fill();
 
-                // ── Header: Title ──
                 ctx.textAlign    = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillStyle    = C.text;
                 const titleSize  = isPortrait ? Math.round(36 * s) : Math.round(42 * s);
-                ctx.font         = `${titleSize}px 'DM Serif Display', serif`;
+                ctx.font         = `700 ${titleSize}px 'Space Grotesk', sans-serif`;
                 ctx.fillText('Timeline ✦', CX, OUTER * 0.5 + HDR_H * 0.35);
 
-                // ── Header: Date (prominent) ──
                 const dateLabel = getDateLabel();
                 if (dateLabel) {
                     const dateFSize = isPortrait ? Math.round(16 * s) : Math.round(14 * s);
                     ctx.fillStyle = C.accent;
-                    ctx.font      = `600 ${dateFSize}px Google Sans, Plus Jakarta Sans, sans-serif`;
+                    ctx.font      = `600 ${dateFSize}px Inter, sans-serif`;
                     ctx.fillText(dateLabel, CX, OUTER * 0.5 + HDR_H * 0.70);
                 }
 
-                // ── Separator ──
                 ctx.strokeStyle = C.border;
                 ctx.lineWidth   = 1;
                 ctx.globalAlpha = 0.6;
@@ -3212,7 +2182,6 @@
                 ctx.stroke();
                 ctx.globalAlpha = 1;
 
-                // ── Center line ──
                 ctx.strokeStyle = C.borderL;
                 ctx.lineWidth   = Math.round(2 * s);
                 ctx.beginPath();
@@ -3220,7 +2189,6 @@
                 ctx.lineTo(CX, mPx(1440));
                 ctx.stroke();
 
-                // ── Ticks & labels ──
                 for (let h = 0; h <= 24; h++) {
                     const y       = mPx(h * 60);
                     const label   = h === 24 ? '00:00' : `${h.toString().padStart(2,'0')}:00`;
@@ -3238,7 +2206,7 @@
                     ctx.stroke();
 
                     const fSize = isMajor ? Math.round(13*s) : Math.round(11*s);
-                    ctx.font         = `${fSize}px DM Mono, monospace`;
+                    ctx.font         = `${fSize}px 'JetBrains Mono', 'Inter', monospace`;
                     ctx.textAlign    = 'left';
                     ctx.textBaseline = 'middle';
                     ctx.fillStyle    = C.muted;
@@ -3246,7 +2214,6 @@
                     ctx.globalAlpha = 1;
                 }
 
-                // ── Half-hour marks ──
                 for (let h = 0; h < 24; h++) {
                     const y  = mPx(h * 60 + 30);
                     const tL = Math.round(4 * s);
@@ -3260,7 +2227,6 @@
                     ctx.globalAlpha = 1;
                 }
 
-                // ── Events ──
                 const DOT_R    = Math.round(7 * s);
                 const CONN_BASE = Math.round(72 * s);
                 const CONN_LANE = Math.round(28 * s);
@@ -3283,12 +2249,10 @@
 
                     ctx.globalAlpha = alpha;
 
-                    // Segment
                     roundRectPath(ctx, lnX - SEG_W / 2, startY, SEG_W, segH, SEG_W / 2);
                     ctx.fillStyle = color;
                     ctx.fill();
 
-                    // Dot
                     ctx.beginPath();
                     ctx.arc(lnX, startY, DOT_R, 0, Math.PI * 2);
                     ctx.fillStyle = color;
@@ -3297,7 +2261,6 @@
                     ctx.lineWidth   = Math.round(2 * s);
                     ctx.stroke();
 
-                    // Connector
                     const connX0  = lnX + dir * DOT_R;
                     ctx.globalAlpha  = ev.done ? 0.25 : 0.75;
                     ctx.strokeStyle  = color;
@@ -3308,7 +2271,6 @@
                     ctx.stroke();
                     ctx.globalAlpha = alpha;
 
-                    // Card pill
                     const cardX = isRight
                         ? lnX + DOT_R + connLen + Math.round(4*s)
                         : lnX - DOT_R - connLen - Math.round(4*s) - CARD_MAX_W;
@@ -3318,13 +2280,11 @@
                     ctx.fill();
 
                     const padX = Math.round(14 * s);
-                    // Name
                     ctx.fillStyle    = 'rgba(255,255,255,0.95)';
-                    ctx.font         = `600 ${F_NAME}px Google Sans, Plus Jakarta Sans, sans-serif`;
+                    ctx.font         = `600 ${F_NAME}px Inter, sans-serif`;
                     ctx.textAlign    = 'left';
                     ctx.textBaseline = 'alphabetic';
                     if (ev.done) {
-                        // Strikethrough simulation
                         const t = fitText(ctx, ev.name, CARD_MAX_W - padX * 2);
                         const tw = ctx.measureText(t).width;
                         ctx.fillText(t, cardX + padX, cardY + CARD_H * 0.48);
@@ -3334,25 +2294,22 @@
                         ctx.fillText(fitText(ctx, ev.name, CARD_MAX_W - padX * 2), cardX + padX, cardY + CARD_H * 0.48);
                     }
 
-                    // Time
                     ctx.fillStyle = 'rgba(255,255,255,0.62)';
-                    ctx.font      = `${F_TIME}px DM Mono, monospace`;
+                    ctx.font      = `${F_TIME}px 'JetBrains Mono', 'Inter', monospace`;
                     const tStr    = `${ev.startStr}–${ev.endStr} · ${formatDur(ev.duration)}`;
                     ctx.fillText(fitText(ctx, tStr, CARD_MAX_W - padX * 2), cardX + padX, cardY + CARD_H * 0.82);
 
                     ctx.globalAlpha = 1;
                 });
 
-                // ── Watermark ──
                 ctx.globalAlpha  = 0.35;
                 ctx.fillStyle    = C.muted;
-                ctx.font         = `${Math.round(11*s)}px DM Mono, monospace`;
+                ctx.font         = `${Math.round(11*s)}px 'JetBrains Mono', 'Inter', monospace`;
                 ctx.textAlign    = 'right';
                 ctx.textBaseline = 'bottom';
                 ctx.fillText('Timeline ✦', cW - OUTER, cH - OUTER * 0.6);
                 ctx.globalAlpha  = 1;
 
-                // ── Download ──
                 canvas.toBlob(blob => {
                     const url = URL.createObjectURL(blob);
                     const a   = document.createElement('a');
@@ -3366,87 +2323,9 @@
             });
         }
 
-        // ── FULLSCREEN (internal — triggered by U-Turn mode) ──
-        let isFullscreen = false;
-        let fsSavedScrollTop = 0;
-        let fsSavedScrollLeft = 0;
-
-        function _enterFullscreen() {
-            const card   = document.getElementById('timelineCard');
-            const scroll = document.getElementById('timelineScroll');
-            const wrap   = document.getElementById('timelineWrapper');
-            const svg    = document.getElementById('baseSvg');
-
-            isFullscreen = true;
-            fsSavedScrollTop  = scroll.scrollTop;
-            fsSavedScrollLeft = scroll.scrollLeft;
-            card.classList.add('fullscreen-mode');
-            document.body.classList.add('fs-active');
-
-            // Sync the date input in the fullscreen header
-            const mainDate = document.getElementById('timelineDate').value;
-            const fsDate   = document.getElementById('timelineDateFs');
-            if (fsDate) fsDate.value = mainDate;
-
-            requestAnimationFrame(() => requestAnimationFrame(() => {
-                const scrollW = scroll.clientWidth || (window.innerWidth - 60);
-                const newW    = Math.max(scrollW, TIMELINE_W_BASE);
-                window._fsTimelineW = newW;
-                window._fsTimelineH = null;
-                wrap.style.width  = newW + 'px';
-                wrap.style.height = (scroll.clientHeight || 580) + 'px';
-                svg.style.height  = wrap.style.height;
-
-                renderBaseTrack();
-                renderTicks();
-                updateUI();
-
-                // Auto-scroll to current time
-                const now    = new Date();
-                const nowMin = now.getHours() * 60 + now.getMinutes();
-                const targetX = minToPx(nowMin) - scroll.clientWidth / 2;
-                scroll.scrollLeft = Math.max(0, targetX);
-                scroll.scrollTop  = 0;
-            }));
-        }
-
-        function _exitFullscreen() {
-            const card   = document.getElementById('timelineCard');
-            const scroll = document.getElementById('timelineScroll');
-            const wrap   = document.getElementById('timelineWrapper');
-            const svg    = document.getElementById('baseSvg');
-
-            isFullscreen = false;
-            card.classList.remove('fullscreen-mode');
-            document.body.classList.remove('fs-active');
-            wrap.style.height = '1200px';
-            wrap.style.width  = '100%';
-            svg.setAttribute('height', 1200);
-            svg.style.height  = '1200px';
-            window._fsTimelineH = null;
-            window._fsTimelineW = null;
-
-            requestAnimationFrame(() => {
-                renderBaseTrack();
-                renderTicks();
-                updateUI();
-                scroll.scrollTop  = fsSavedScrollTop;
-                scroll.scrollLeft = fsSavedScrollLeft;
-            });
-        }
-
-        // Keep toggleFullscreen as stub for any remaining ESC reference
-        function toggleFullscreen() {
-            if (isFullscreen) {
-                setLayoutModeDropdown('straight');
-            }
-        }
-
-        // ── ESC to close modal / exit fullscreen ──
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
-                if (isFullscreen) toggleFullscreen();
-                else if (document.getElementById('settingsPanel').classList.contains('show')) closeSettings();
+                if (document.getElementById('settingsPanel').classList.contains('show')) closeSettings();
                 else { closeEditModal(); closeExportModal(); }
             }
         });
@@ -3455,14 +2334,12 @@
             if (e.target === this) closeExportModal();
         });
 
-        // ── CANCEL INLINE EDIT ──
         function cancelEdit() {
             document.getElementById('btnCancelEdit').classList.add('hidden');
             document.getElementById('btnSaveTask').textContent = 'Save Task';
             document.getElementById('eventForm').reset();
         }
 
-        // ── FORM SUBMIT ──
         const form = document.getElementById('eventForm');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -3498,7 +2375,6 @@
         renderTicks();
         updateUI();
 
-        // Update current time needle every minute
         setInterval(renderCurrentTime, 60000);
 
         window.addEventListener('resize', () => {
@@ -3512,13 +2388,12 @@
         // ────────────────────────────────────────────
 
         const FOLDER_COLORS = ['#6366f1','#f59e0b','#10b981','#ef4444','#3b82f6','#ec4899','#8b5cf6','#14b8a6'];
-        let folders         = [];   // { id, name, color }
+        let folders         = [];   
         let folderIdCounter = 1;
-        let savedTimelines  = [];   // { id, name, folderId, date, events[], eventCount, savedAt }
+        let savedTimelines  = [];   
         let savedIdCounter  = 1;
-        let collActiveFolderId = 'all'; // 'all' or folder id
+        let collActiveFolderId = 'all'; 
 
-        // ── Storage ──
         function saveCollToStorage() {
             localStorage.setItem('coll_folders',  JSON.stringify(folders));
             localStorage.setItem('coll_saved',    JSON.stringify(savedTimelines));
@@ -3536,7 +2411,6 @@
         }
         loadCollFromStorage();
 
-        // ── Helpers ──
         function getDateLabelFor(dateStr) {
             if (!dateStr) return '—';
             const d = new Date(dateStr + 'T00:00:00');
@@ -3553,7 +2427,6 @@
             return `${Math.floor(h / 24)} hari lalu`;
         }
 
-        // ── Open / Close ──
         function openCollections() {
             loadCollFromStorage();
             collActiveFolderId = 'all';
@@ -3572,7 +2445,6 @@
             if (e.target === this) closeCollections();
         });
 
-        // ── Save form ──
         function openSaveForm() {
             if (events.length === 0) return showToast('Tambahkan task dulu!');
             renderCollFolderSelect();
@@ -3604,7 +2476,7 @@
                 name,
                 folderId,
                 date:       dateVal,
-                events:     JSON.parse(JSON.stringify(events)), // deep copy
+                events:     JSON.parse(JSON.stringify(events)), 
                 eventCount: events.length,
                 savedAt:    new Date().toISOString()
             });
@@ -3616,7 +2488,6 @@
             showToast(`"${name}" tersimpan ke koleksi ✓`);
         }
 
-        // ── Create folder ──
         function promptNewFolder() {
             const name = prompt('Nama folder baru:');
             if (!name || !name.trim()) return;
@@ -3645,7 +2516,6 @@
             renderCollFolderSelect();
         }
 
-        // ── Load timeline ──
         function loadTimeline(id) {
             const tl = savedTimelines.find(t => t.id === id);
             if (!tl) return;
@@ -3656,6 +2526,7 @@
             eventIdCounter = Math.max(...events.map(e => e.id), 0) + 1;
             if (tl.date) {
                 document.getElementById('timelineDate').value = tl.date;
+                document.getElementById('hdrDateUturn').value = tl.date;
                 updateDateBadge(tl.date);
             }
             updateUI();
@@ -3674,12 +2545,10 @@
             showToast(`"${tl.name}" dihapus dari koleksi`);
         }
 
-        // ── Render Sidebar ──
         function renderCollSidebar() {
             const allCount = savedTimelines.length;
             const list = document.getElementById('collFolderList');
 
-            // All folder item
             const allActive = collActiveFolderId === 'all';
             let html = `
                 <div class="coll-folder-item ${allActive ? 'active' : ''}" onclick="setCollFolder('all')">
@@ -3715,7 +2584,6 @@
             renderCollGrid();
         }
 
-        // ── Render Grid ──
         function renderCollGrid() {
             const query  = (document.getElementById('collSearch').value || '').toLowerCase();
             const grid   = document.getElementById('collGrid');
@@ -3829,27 +2697,27 @@
         function ghApplyData(data) {
             if (!data || data.version !== 1) throw new Error('Format data tidak dikenal');
 
-            // Load events
             events = Array.isArray(data.events) ? data.events : [];
             eventIdCounter = data.eventIdCounter || (Math.max(0, ...events.map(e => e.id ?? 0)) + 1);
 
-            // Load collections
             if (Array.isArray(data.folders))        folders = data.folders;
             if (Array.isArray(data.savedTimelines)) savedTimelines = data.savedTimelines;
             if (typeof data.folderIdCounter === 'number') folderIdCounter = data.folderIdCounter;
 
-            // Load layout & date
             if (data.layoutMode) {
                 currentLayoutMode = data.layoutMode;
-                const sel = document.getElementById('layoutMode');
-                if (sel) sel.value = currentLayoutMode;
+                const toggleBtn = document.getElementById('ubnav-layout-toggle');
+                if (toggleBtn) {
+                    toggleBtn.innerHTML = (currentLayoutMode === 'uturn') ? '⟵ Straight Line' : '↩ U-Turn';
+                }
             }
             if (data.date) {
                 const dateEl = document.getElementById('timelineDate');
                 if (dateEl) { dateEl.value = data.date; updateDateBadge(data.date); }
+                const uturnDateEl = document.getElementById('hdrDateUturn');
+                if (uturnDateEl) { uturnDateEl.value = data.date; }
             }
 
-            // Save to localStorage and re-render
             saveToStorage();
             saveCollToStorage();
             assignLanes();
@@ -3896,7 +2764,6 @@
                 const json = await res.json();
                 const newId = json.id;
 
-                // Save the Gist ID back
                 localStorage.setItem(GH_GIST_KEY, newId);
                 const gistEl = document.getElementById('ghGistId');
                 if (gistEl) gistEl.value = newId;
@@ -3940,7 +2807,6 @@
                 const file  = json.files?.[GIST_FILENAME];
                 if (!file)  throw new Error(`File "${GIST_FILENAME}" tidak ditemukan di Gist`);
 
-                // Fetch raw content if truncated
                 let raw = file.content;
                 if (file.truncated) {
                     const rawRes = await fetch(file.raw_url, {
@@ -3979,20 +2845,15 @@
             window.open(`https://gist.github.com/${gistId}`, '_blank');
         }
 
-        // Load config when settings panel is opened
-        const _origOpenSettings = typeof openSettings === 'function' ? openSettings : null;
         document.addEventListener('DOMContentLoaded', () => ghLoadConfig());
         setTimeout(() => ghLoadConfig(), 200);
-
-        // ── END GITHUB SYNC ──
 
         // ═══════════════════════════════════════
         //  AGENDA — DAFTAR KEGIATAN HARI INI
         // ═══════════════════════════════════════
 
-        // Storage: { [dateKey]: { tlDone: {[evId]: bool}, extra: [{id,time,name,done}], counter } }
         const AG_KEY = 'ag_agenda';
-        let agData = {};        // full data map
+        let agData = {};        
         let agIdCounter = 1;
 
         function agDateKey() {
@@ -4012,7 +2873,6 @@
             return agData[key];
         }
 
-        // Toggle done state for a timeline event
         function agTlToggle(evId) {
             const key = agDateKey();
             const day = agGetDay(key);
@@ -4021,7 +2881,6 @@
             agRender();
         }
 
-        // Add an extra activity
         function agAdd() {
             const nameEl = document.getElementById('agAddInput');
             const timeEl = document.getElementById('agAddTime');
@@ -4038,7 +2897,6 @@
             agRender();
         }
 
-        // Toggle done for extra activity
         function agExtraToggle(id) {
             const key = agDateKey();
             const day = agGetDay(key);
@@ -4046,7 +2904,6 @@
             if (item) { item.done = !item.done; agSave(); agRender(); }
         }
 
-        // Delete extra activity
         function agExtraDelete(id) {
             const key = agDateKey();
             const day = agGetDay(key);
@@ -4055,7 +2912,6 @@
             agRender();
         }
 
-        // Clear all extra activities for today
         function agClearExtra() {
             const key = agDateKey();
             const day = agGetDay(key);
@@ -4066,7 +2922,6 @@
             agRender();
         }
 
-        // Colour map: event category → hex (reuse colorMap from timeline)
         function agEventColor(ev) {
             const c = (ev.category || 'purple').toLowerCase();
             return (window.colorMap && window.colorMap[c]) ? window.colorMap[c].bg : '#7c5cfc';
@@ -4099,7 +2954,6 @@
             const exEmpty= document.getElementById('agExtraEmpty');
             if (!tlList) return;
 
-            // ── Timeline events sorted by startMin ──
             const tlEvents = (window.events || []).slice().sort((a,b) => a.startMin - b.startMin);
             tlList.querySelectorAll('.ag-item').forEach(el => el.remove());
 
@@ -4147,7 +3001,6 @@
                 });
             }
 
-            // ── Extra activities ──
             exList.querySelectorAll('.ag-item').forEach(el => el.remove());
             const extras = day.extra || [];
 
@@ -4193,7 +3046,6 @@
                 });
             }
 
-            // ── Progress stats ──
             const tlDoneCount  = tlEvents.filter(ev => !!day.tlDone[ev.id]).length;
             const exDoneCount  = extras.filter(x => x.done).length;
             const totalDone    = tlDoneCount + exDoneCount;
@@ -4207,77 +3059,13 @@
             if (el('agStatPct'))   el('agStatPct').textContent   = pct + '%';
         }
 
-        // Called when timeline date changes or events update — refresh agenda panel
         function agRefresh() { agLoad(); agRender(); }
 
-        // Init
         agLoad();
         agRender();
 
-        // ── INITIAL SECTION ──
-        const savedSection = localStorage.getItem('tl_active_section') || 'timeline';
-        setActiveSection(savedSection);
-        // Sync dropdown labels to saved state
-        const _sl = savedSection;
-        document.getElementById('panelLabel').textContent = _sl.charAt(0).toUpperCase() + _sl.slice(1);
-        document.querySelectorAll('#panelMenu .hdr-option').forEach(o => o.classList.toggle('active', o.dataset.sectionTab === _sl));
-        const savedTheme = localStorage.getItem('tl_theme') || 'dark';
-        syncSettingsTheme(savedTheme);
-
-        function onHdrDateUturnChange() {
-            const v = document.getElementById('hdrDateUturn')?.value;
-            if (v) {
-                document.getElementById('timelineDate').value = v;
-                onDateChange();
-            }
-        }
-
-        // ── UTURN BOTTOM NAV LOGIC ──
-        // ubnavSelect: jika timeline → masuk kembali ke fullscreen
-        //              jika panel lain → keluar fullscreen sementara (bottom nav tetap muncul)
         function ubnavSelect(name) {
-            if (name === 'timeline') {
-                // Masuk kembali ke fullscreen
-                if (!isFullscreen) {
-                    const card = document.getElementById('timelineCard');
-                    card.classList.add('fullscreen-mode');
-                    document.body.classList.add('fs-active');
-                    isFullscreen = true;
-                    const scroll = document.getElementById('timelineScroll');
-                    const wrap   = document.getElementById('timelineWrapper');
-                    const svg    = document.getElementById('baseSvg');
-                    requestAnimationFrame(() => requestAnimationFrame(() => {
-                        const scrollW = scroll.clientWidth || (window.innerWidth - 60);
-                        const newW = Math.max(scrollW, TIMELINE_W_BASE);
-                        window._fsTimelineW = newW;
-                        window._fsTimelineH = null;
-                        wrap.style.width  = newW + 'px';
-                        wrap.style.height = (scroll.clientHeight || 580) + 'px';
-                        svg.style.height  = wrap.style.height;
-                        renderBaseTrack(); renderTicks(); updateUI();
-                    }));
-                }
-                setActiveSection('timeline');
-            } else {
-                // Keluar fullscreen sementara, bottom nav tetap (uturn-active masih di body)
-                if (isFullscreen) {
-                    const card   = document.getElementById('timelineCard');
-                    const wrap   = document.getElementById('timelineWrapper');
-                    const svg    = document.getElementById('baseSvg');
-                    const scroll = document.getElementById('timelineScroll');
-                    isFullscreen = false;
-                    card.classList.remove('fullscreen-mode');
-                    document.body.classList.remove('fs-active');
-                    wrap.style.height = '1200px';
-                    wrap.style.width  = '100%';
-                    svg.setAttribute('height', 1200);
-                    svg.style.height  = '1200px';
-                    window._fsTimelineH = null;
-                    window._fsTimelineW = null;
-                    requestAnimationFrame(() => { renderBaseTrack(); renderTicks(); updateUI(); });
-                }
-                setActiveSection(name);
-            }
+            setActiveSection(name);
             syncUbnavActive(name);
         }
 
@@ -4288,11 +3076,13 @@
             });
         }
 
-        // Sync saat page pertama load
+        // Initialize active section on load
         (function() {
             const cur = localStorage.getItem('tl_active_section') || 'timeline';
+            setActiveSection(cur);
             syncUbnavActive(cur);
         })();
+
     </script>
 </body>
 </html>
