@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "appName": "timegrid",
+  "lastUpdated": "2026-05-30T10:26:00.370Z",
+  "days": {
+    "2026-06-05": {
+      "actually": [],
+      "planning": [],
+      "counter": 1
+    },
+    "2026-06-02": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-06-07": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-05-27": {
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Dure",
+          "startStr": "08:00",
+          "endStr": "14:00",
+          "startMin": 480,
+          "endMin": 840,
+          "duration": 360,
+          "category": "purple",
+          "notes": ""
+        }
+      ],
+      "counter": 2,
+      "actually": []
+    },
+    "2026-06-06": {
+      "actually": [],
+      "planning": [],
+      "counter": 1
+    },
+    "2026-05-29": {
+      "actually": [],
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Dure",
+          "startStr": "08:00",
+          "endStr": "14:00",
+          "startMin": 480,
+          "endMin": 840,
+          "duration": 360,
+          "category": "purple",
+          "notes": ""
+        }
+      ],
+      "counter": 2
+    },
+    "2026-06-03": {
+      "actually": [],
+      "planning": [],
+      "counter": 1
+    },
+    "2026-06-01": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "COba": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-05-26": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-06-04": {
+      "actually": [],
+      "planning": [],
+      "counter": 1
+    },
+    "2026-05-30": {
+      "actually": [],
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Revisi MapManager",
+          "startStr": "16:00",
+          "endStr": "17:30",
+          "startMin": 960,
+          "endMin": 1050,
+          "duration": 90,
+          "category": "gold",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "type": "event",
+          "name": "Beres-beres + Windown",
+          "startStr": "17:30",
+          "endStr": "18:00",
+          "startMin": 1050,
+          "endMin": 1080,
+          "duration": 30,
+          "category": "rose",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "type": "event",
+          "name": "Ngaji + Belajar Shalat/Mapping",
+          "startStr": "18:00",
+          "endStr": "19:00",
+          "startMin": 1080,
+          "endMin": 1140,
+          "duration": 60,
+          "category": "green",
+          "notes": ""
+        }
+      ],
+      "counter": 4
+    },
+    "2026-05-28": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "Coba aja dulu": {
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Pisang",
+          "startStr": "04:50",
+          "endStr": "07:00",
+          "startMin": 290,
+          "endMin": 420,
+          "duration": 130,
+          "category": "purple",
+          "notes": ""
+        }
+      ],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-05-31": {
+      "actually": [],
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Dure",
+          "startStr": "08:00",
+          "endStr": "14:00",
+          "startMin": 480,
+          "endMin": 840,
+          "duration": 360,
+          "category": "purple",
+          "notes": ""
+        }
+      ],
+      "counter": 2
+    },
+    "Coba": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    },
+    "Barca": {
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Hola",
+          "startStr": "04:50",
+          "endStr": "09:00",
+          "startMin": 290,
+          "endMin": 540,
+          "duration": 250,
+          "category": "blue",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "type": "event",
+          "name": "Bar",
+          "startStr": "09:15",
+          "endStr": "10:15",
+          "startMin": 555,
+          "endMin": 615,
+          "duration": 60,
+          "category": "red",
+          "notes": ""
+        }
+      ],
+      "counter": 1,
+      "actually": []
+    },
+    "untitled-session": {
+      "planning": [
+        {
+          "id": 1,
+          "type": "event",
+          "name": "Pisang",
+          "startStr": "04:50",
+          "endStr": "07:00",
+          "startMin": 290,
+          "endMin": 420,
+          "duration": 130,
+          "category": "purple",
+          "notes": ""
+        }
+      ],
+      "counter": 1,
+      "actually": []
+    },
+    "2026-06-27": {
+      "planning": [],
+      "counter": 1,
+      "actually": []
+    }
+  }
+}
