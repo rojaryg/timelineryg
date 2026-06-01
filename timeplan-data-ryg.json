@@ -92,7 +92,7 @@
       "priority": 1
     }
   ],
-  "showOnlyEvents": false,
+  "showOnlyEvents": true,
   "selectedGroups": [
     "g_1780237879835"
   ],
