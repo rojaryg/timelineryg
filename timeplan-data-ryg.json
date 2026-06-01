@@ -1,5 +1,5 @@
 {
-  "theme": "dark",
+  "theme": "miku",
   "groups": [
     {
       "id": "general",
@@ -68,6 +68,16 @@
       "endDate": "2026-01-01 11:00",
       "desc": "",
       "color": "#33c7db",
+      "groupId": "general",
+      "priority": 1
+    },
+    {
+      "id": 1780273921448,
+      "name": "Kino ga",
+      "date": "2026-01-01 07:30",
+      "endDate": "",
+      "desc": "",
+      "color": "#95b300",
       "groupId": "general",
       "priority": 1
     }
