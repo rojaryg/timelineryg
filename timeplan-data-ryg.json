@@ -92,10 +92,7 @@
       "priority": 1
     }
   ],
-  "showOnlyEvents": false,
-  "selectedGroups": [
-    "g_1780237879835",
-    "general"
-  ],
+  "showOnlyEvents": true,
+  "selectedGroups": [],
   "displayYears": 5
 }
