@@ -36,40 +36,12 @@
       "groupId": "general"
     },
     {
-      "id": 1780235436986,
-      "name": "Lulus S1",
-      "date": "2026-01-01 12:00",
-      "desc": "",
-      "color": "#3498db",
-      "groupId": "general"
-    },
-    {
       "id": 1780239283890,
       "name": "drive",
       "date": "2026-01-01 12:00",
       "desc": "",
       "color": "#3498db",
       "groupId": "general"
-    },
-    {
-      "id": 1780240398692,
-      "name": "Lomba",
-      "date": "2026-01-01 08:00",
-      "endDate": "2026-01-01 11:00",
-      "desc": "",
-      "color": "#33c7db",
-      "groupId": "general",
-      "priority": 1
-    },
-    {
-      "id": 1780273929337,
-      "name": "Kino ga",
-      "date": "2026-01-01 07:30",
-      "endDate": "",
-      "desc": "",
-      "color": "#95b300",
-      "groupId": "general",
-      "priority": 1
     },
     {
       "id": 1780297583052,
