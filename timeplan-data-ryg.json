@@ -26,16 +26,6 @@
       "desc": "Bergabung dengan perusahaan impian.",
       "color": "#2ecc71",
       "groupId": "general"
-    },
-    {
-      "id": 1780297583052,
-      "name": "Zero Bro",
-      "date": "2026-10-11 10:00",
-      "endDate": "",
-      "desc": "",
-      "priority": "4",
-      "color": "#ffff00",
-      "groupId": "general"
     }
   ],
   "showOnlyEvents": false,
