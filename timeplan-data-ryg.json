@@ -26,6 +26,16 @@
       "desc": "Bergabung dengan perusahaan impian.",
       "color": "#2ecc71",
       "groupId": "general"
+    },
+    {
+      "id": 1780378384071,
+      "name": "Kocak",
+      "date": "2027-02-02 12:00",
+      "endDate": "",
+      "desc": "",
+      "color": "#3498db",
+      "groupId": "general",
+      "priority": 4
     }
   ],
   "showOnlyEvents": false,
